@@ -1,0 +1,147 @@
+.top{
+	width:100%;
+	position: relative;
+	max-height: 1482px;
+	height: 1482px
+}
+
+.top--bg1,.header--menu--bg{
+	width: 100%;
+}
+
+.top--bg1{
+	background-image: url("../images/bg1.png");
+	background-repeat: no-repeat;
+	height: 1482px;
+	position: absolute;
+	top: -30px;
+	background-position: center;
+}
+
+/*header*/
+.header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-width: 100vw;
+	width: 100%;
+}
+
+.header--menu{
+	background-image: url("../images/menu.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+    height: 233px;
+    position: relative;
+    background-position: center;
+}
+
+.header--container{
+	width: 100%;
+}
+
+.header--container img,.top--bg1 img{
+	width: 99vw;
+}
+
+.header--icon{
+	position: absolute;
+	left: -40px;
+    top: 25px;
+}
+
+.header--icon img{
+	width: auto !important;
+}
+
+
+.header--img{
+	position: absolute;
+	top: 8%;
+	left: 43%;
+}
+
+.header--img img{
+	width: 240px;
+	height: 100%;
+}
+
+.header .logo{
+	position: absolute;
+    top: 50px;
+    left: 250px;
+    width: 220px;
+}
+
+.header--nav{
+	width: 730px;
+    margin: auto;
+    position: relative;
+}
+
+.header--fanpage{
+	position: absolute;
+    width: 70px;
+    height: 20px;
+    font-family: UTM Cafeta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFC107;
+    top: 30px;
+    right: 150px;
+}
+
+.header--call{
+	position: absolute;
+	width: 230px;
+	height: 40px;
+	top: 15px;
+    right: -100px;
+}
+
+.header--call img{
+	width: auto;
+}
+
+/*menu*/
+.menu{
+	position: absolute;
+	top: 30px;
+    left: 10px;
+}
+.menu ul{
+	display: flex;
+	flex-direction: row;
+}
+
+.menu ul li{
+	flex: 0 0 100px;
+}
+
+.menu ul li a{
+	width: 62px;
+	height: 20px;
+	font-family: UTM Cafeta;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 20px;
+	letter-spacing: 0.1em;
+	color: #FFC107;
+}
+
+.menu ul li:first-child{
+	order: 3 !important;
+}
+
+.menu ul li:last-child{
+	order: 1 !important;
+}
+
+.menu ul li{
+	order: 2;
+}

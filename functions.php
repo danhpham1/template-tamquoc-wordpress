@@ -1,0 +1,32 @@
+<?php
+function header_external_styles() {
+        wp_register_style( 'header-css',get_stylesheet_directory_uri().'/assets/css/header.css' );
+    }
+//add menu
+add_theme_support('menus');
+function register_my_menus() {
+    $args = array( 
+        'header' => __( 'Header', 'Tam Quoc' ),  
+    );
+    register_nav_menus( $args );
+}
+add_action( 'init', 'register_my_menus' );
+
+function fn_name(){
+ add_theme_support('post-thumbnails');
+}
+add_action('init','fn_name');
+function wpb_widgets_init() {
+ 
+    register_sidebar( array(
+        'name'          => 'Custom Header Widget Area',
+        'id'            => 'custom-header-widget',
+        'before_widget' => '<div class="chw-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="chw-title">',
+        'after_title'   => '</h2>',
+    ) );
+ 
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
+?>
