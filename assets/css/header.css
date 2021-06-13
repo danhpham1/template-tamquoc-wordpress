@@ -2,7 +2,8 @@
 	width:100%;
 	position: relative;
 	max-height: 1482px;
-	height: 1482px
+	height: 1482px;
+	z-index: 10;
 }
 
 .top--bg1,.header--menu--bg{
@@ -108,21 +109,21 @@
 }
 
 /*menu*/
-.menu{
+.menu-header-container{
 	position: absolute;
 	top: 30px;
     left: 10px;
 }
-.menu ul{
+.menu-header-container ul{
 	display: flex;
 	flex-direction: row;
 }
 
-.menu ul li{
+.menu-header-container ul li{
 	flex: 0 0 100px;
 }
 
-.menu ul li a{
+.menu-header-container ul li a{
 	width: 62px;
 	height: 20px;
 	font-family: UTM Cafeta;
@@ -132,16 +133,4 @@
 	line-height: 20px;
 	letter-spacing: 0.1em;
 	color: #FFC107;
-}
-
-.menu ul li:first-child{
-	order: 3 !important;
-}
-
-.menu ul li:last-child{
-	order: 1 !important;
-}
-
-.menu ul li{
-	order: 2;
 }

@@ -39,8 +39,10 @@
 					</ul>
 					<div id="tabs-1" class="main--news-content">
 						<?php 
+						$isThumbnails = false;
+						$current_ID ;
 						$args = array(
-							'numberposts' => 4,
+							'posts_per_page' => 4,
 							'category_name' => 'tin-tuc',
 						);
 						$tintuc = new WP_Query( $args );
@@ -48,7 +50,7 @@
 							<?php
 							while ( $tintuc->have_posts() ) {
 								$tintuc->the_post();
-								if(has_post_thumbnail()){ ?>
+								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
 										<div class="news--main-thunail">
 											<?php echo the_post_thumbnail(); ?>
@@ -56,7 +58,7 @@
 										<div class="news--main-info">
 											<div class="news--main-top">
 												<div>
-													<a href="#"><?php echo get_the_title(); ?></a>
+													<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
 												</div>
 												<div>
 													<?php echo get_the_date(); ?>
@@ -71,36 +73,71 @@
 									</div>
 									<hr>
 									<?php 
+									$GLOBALS['isThumbnails'] = true;
+									$GLOBALS['current_ID'] = $tintuc->current_post;
 									break;
 								}
+								?>
+								<?php	
 							}
-							?>
-							<?php
+							wp_reset_postdata();
+							$args1 = array(
+								'posts_per_page' => 4,
+								'category_name' => 'tin-tuc',
+							);
+							$tintuc = new WP_Query( $args1 );
 							while ( $tintuc->have_posts() ) {
 								$tintuc->the_post();
-								if(!has_post_thumbnail() && ($tintuc->current_post != $tintuc->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<hr>
-									<?php 
-								} 
+								if($GLOBALS['isThumbnails']){
+									if(($tintuc->current_post != $tintuc->post_count - 1) && ($GLOBALS['current_ID'] != $tintuc->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
 
-								if(!has_post_thumbnail() && ($tintuc->current_post == $tintuc->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<?php
+									if(($tintuc->current_post == $tintuc->post_count - 1) && ($GLOBALS['current_ID'] != $tintuc->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
+								}else{
+									if(($tintuc->current_post != $tintuc->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
+
+									if(($tintuc->current_post == $tintuc->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
 								}
 							}
 							?>
@@ -111,8 +148,10 @@
 					</div>
 					<div id="tabs-2" class="main--news-content">
 						<?php 
+						$isThumbnailsSuKien = false;
+						$current_IDSuKien ;
 						$args = array(
-							'numberposts' => 4,
+							'posts_per_page' => 4,
 							'category_name' => 'su-kien',
 						);
 						$sukien = new WP_Query( $args );
@@ -120,7 +159,7 @@
 							<?php
 							while ( $sukien->have_posts() ) {
 								$sukien->the_post();
-								if(has_post_thumbnail()){ ?>
+								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
 										<div class="news--main-thunail">
 											<?php echo the_post_thumbnail(); ?>
@@ -128,7 +167,7 @@
 										<div class="news--main-info">
 											<div class="news--main-top">
 												<div>
-													<a href="#"><?php echo get_the_title(); ?></a>
+													<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
 												</div>
 												<div>
 													<?php echo get_the_date(); ?>
@@ -143,36 +182,71 @@
 									</div>
 									<hr>
 									<?php 
+									$GLOBALS['isThumbnailsSuKien'] = true;
+									$GLOBALS['current_IDSuKien'] = $sukien->current_post;
 									break;
 								}
+								?>
+								<?php	
 							}
-							?>
-							<?php
+							wp_reset_postdata();
+							$args1 = array(
+								'posts_per_page' => 4,
+								'category_name' => 'su-kien',
+							);
+							$sukien = new WP_Query( $args1 );
 							while ( $sukien->have_posts() ) {
 								$sukien->the_post();
-								if(!has_post_thumbnail() && ($sukien->current_post != $sukien->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<hr>
-									<?php 
-								} 
+								if($GLOBALS['isThumbnailsSuKien']){
+									if(($sukien->current_post != $sukien->post_count - 1) && ($GLOBALS['current_IDSuKien'] != $sukien->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
 
-								if(!has_post_thumbnail() && ($sukien->current_post == $sukien->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<?php
+									if(($sukien->current_post == $sukien->post_count - 1) && ($GLOBALS['current_IDSuKien'] != $sukien->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
+								}else{
+									if(($sukien->current_post != $sukien->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
+
+									if(($sukien->current_post == $sukien->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
 								}
 							}
 							?>
@@ -183,8 +257,10 @@
 					</div>
 					<div id="tabs-3" class="main--news-content">
 						<?php 
+						$isThumbnailsHuongDan = false;
+						$current_IDHuongDan ;
 						$args = array(
-							'numberposts' => 4,
+							'posts_per_page' => 4,
 							'category_name' => 'huong-dan',
 						);
 						$huongdan = new WP_Query( $args );
@@ -192,7 +268,7 @@
 							<?php
 							while ( $huongdan->have_posts() ) {
 								$huongdan->the_post();
-								if(has_post_thumbnail()){ ?>
+								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
 										<div class="news--main-thunail">
 											<?php echo the_post_thumbnail(); ?>
@@ -200,7 +276,7 @@
 										<div class="news--main-info">
 											<div class="news--main-top">
 												<div>
-													<a href="#"><?php echo get_the_title(); ?></a>
+													<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
 												</div>
 												<div>
 													<?php echo get_the_date(); ?>
@@ -215,36 +291,71 @@
 									</div>
 									<hr>
 									<?php 
+									$GLOBALS['isThumbnailsHuongDan'] = true;
+									$GLOBALS['current_IDHuongDan'] = $huongdan->current_post;
 									break;
 								}
+								?>
+								<?php	
 							}
-							?>
-							<?php
+							wp_reset_postdata();
+							$args1 = array(
+								'posts_per_page' => 4,
+								'category_name' => 'huong-dan',
+							);
+							$huongdan = new WP_Query( $args1 );
 							while ( $huongdan->have_posts() ) {
 								$huongdan->the_post();
-								if(!has_post_thumbnail() && ($huongdan->current_post != $huongdan->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<hr>
-									<?php 
-								} 
+								if($GLOBALS['isThumbnailsHuongDan']){
+									if(($huongdan->current_post != $huongdan->post_count - 1) && ($GLOBALS['current_IDHuongDan'] != $huongdan->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
 
-								if(!has_post_thumbnail() && ($huongdan->current_post == $huongdan->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<?php
+									if(($huongdan->current_post == $huongdan->post_count - 1) && ($GLOBALS['current_IDHuongDan'] != $huongdan->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
+								}else{
+									if(($huongdan->current_post != $huongdan->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
+
+									if(($huongdan->current_post == $huongdan->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
 								}
 							}
 							?>
@@ -255,8 +366,10 @@
 					</div>
 					<div id="tabs-4" class="main--news-content">
 						<?php 
+						$isThumbnailsCamNang = false;
+						$current_IDCamnang ;
 						$args = array(
-							'numberposts' => 4,
+							'posts_per_page' => 4,
 							'category_name' => 'cam-nang',
 						);
 						$camnang = new WP_Query( $args );
@@ -264,7 +377,7 @@
 							<?php
 							while ( $camnang->have_posts() ) {
 								$camnang->the_post();
-								if(has_post_thumbnail()){ ?>
+								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
 										<div class="news--main-thunail">
 											<?php echo the_post_thumbnail(); ?>
@@ -272,7 +385,7 @@
 										<div class="news--main-info">
 											<div class="news--main-top">
 												<div>
-													<a href="#"><?php echo get_the_title(); ?></a>
+													<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
 												</div>
 												<div>
 													<?php echo get_the_date(); ?>
@@ -287,36 +400,71 @@
 									</div>
 									<hr>
 									<?php 
+									$GLOBALS['isThumbnailsCamNang'] = true;
+									$GLOBALS['current_IDCamnang'] = $camnang->current_post;
 									break;
 								}
+								?>
+								<?php	
 							}
-							?>
-							<?php
+							wp_reset_postdata();
+							$args1 = array(
+								'posts_per_page' => 4,
+								'category_name' => 'cam-nang',
+							);
+							$camnang = new WP_Query( $args1 );
 							while ( $camnang->have_posts() ) {
 								$camnang->the_post();
-								if(!has_post_thumbnail() && ($camnang->current_post != $camnang->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<hr>
-									<?php 
-								} 
+								if($GLOBALS['isThumbnailsCamNang']){
+									if(($camnang->current_post != $camnang->post_count - 1) && ($GLOBALS['current_IDCamnang'] != $camnang->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
 
-								if(!has_post_thumbnail() && ($camnang->current_post == $camnang->post_count - 1)){ ?>
-									<div class="main--news-items">
-										<p class="item--title">
-											<a href="#">
-												<?php echo get_the_title(); ?>
-											</a>
-										</p>
-										<p class="item--date"><?php echo get_the_date(); ?></p>
-									</div>
-									<?php
+									if(($camnang->current_post == $camnang->post_count - 1) && ($GLOBALS['current_IDCamnang'] != $camnang->current_post)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
+								}else{
+									if(($camnang->current_post != $camnang->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<hr>
+										<?php 
+									} 
+
+									if(($camnang->current_post == $camnang->post_count - 1)){ ?>
+										<div class="main--news-items">
+											<p class="item--title">
+												<a href="<?php the_permalink(); ?>">
+													<?php echo get_the_title(); ?>
+												</a>
+											</p>
+											<p class="item--date"><?php echo get_the_date(); ?></p>
+										</div>
+										<?php
+									}
 								}
 							}
 							?>

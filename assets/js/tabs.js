@@ -19,17 +19,17 @@ $(document).ready(function()
 });
 
 var slideIndex = 1;
-showDivs(slideIndex);
+showDivsImage(slideIndex);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  showDivsImage(slideIndex += n);
 }
 
 function currentDiv(n) {
-  showDivs(slideIndex = n);
+  showDivsImage(slideIndex = n);
 }
 
-function showDivs(n) {
+function showDivsImage(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
