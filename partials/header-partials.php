@@ -1,4 +1,3 @@
-  <div class="top">
     <div class="top--bg1">
     </div>
     <div class="header">
@@ -25,7 +24,3 @@
         </div>
       </div>
     </div>
-    <?php 
-    include get_theme_file_path('/main/section-info-game.php');
-    ?>
-  </div>

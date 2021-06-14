@@ -29,4 +29,11 @@ function wpb_widgets_init() {
  
 }
 add_action( 'widgets_init', 'wpb_widgets_init' );
+
+function posts_on_categorypage( $query ) {
+    if ( $query->is_category()) {
+        $query->set( 'posts_per_page', '10' );
+    }
+}
+add_action( 'pre_get_posts', 'posts_on_categorypage' );
 ?>

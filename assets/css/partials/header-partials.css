@@ -1,8 +1,8 @@
 .top{
 	width:100%;
 	position: relative;
-	max-height: 1482px;
-	height: 1482px;
+	max-height: 795px;
+	height: 795px;
 	z-index: 10;
 }
 
@@ -11,20 +11,10 @@
 }
 
 .top--bg1{
-	background-image: url("../images/bg1.png");
+	background-image: url("../../images/bg-partials.png");
 	background-repeat: no-repeat;
-	height: 1482px;
+	height: 795px;
 	position: absolute;
-	top: -30px;
-	background-position: center;
-}
-
-.top--bg--partials{
-	background-image: url("../images/bg-partials.png");
-	background-repeat: no-repeat;
-	height: 1300px;
-	position: absolute;
-	top: -300px;
 	background-position: center;
 }
 
@@ -38,7 +28,7 @@
 }
 
 .header--menu{
-	background-image: url("../images/menu.png");
+	background-image: url("../../images/menu.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
