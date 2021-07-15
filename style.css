@@ -35,6 +35,11 @@ p{
 
 a{
 	text-decoration: none;
+	color: #959387 !important;
+}
+
+a:hover{
+	text-decoration: none !important;
 }
 
 ul,li{
@@ -46,7 +51,70 @@ ul,li{
 html{
 	font-size: 15px;
 	color: black;
-	font-family: UTM Cafeta;
-    font-style: normal;
-    font-weight: normal;
+	font-family: 'cafeta', sans-serif;
+    	font-style: normal;
+    	font-weight: normal;
+}
+
+body{
+	font-family: 'cafeta', sans-serif;
+	margin-right: 0px !important;
+}
+
+.sticky-right {
+    position: fixed;
+    top: 185px;
+    z-index: 200;
+    right: 0px;
+    background: black;
+    padding: 5px 15px;
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.sticky-right .sticky-right-container {
+    max-width: 120px;
+    height: 100%;
+    position: relative;
+}
+
+.sticky-right-container .sticky-right-items {
+    width: 100%;
+    height: auto;
+}
+
+.sticky-right .sticky-right-container .sticky-right-btn {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.sticky-right .sticky-right-btn img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.sticky-right .sticky-right-items .btn-chplay {
+    margin-top: 5px;
+}
+
+.sticky-right .sticky-right-close {
+    position: absolute;
+    top: -10px;
+    left: -45px;
+    background: black;
+    cursor: pointer;
+}
+
+.sticky-right .sticky-right-close img {
+    width: 30px;
+    height: 30px;
+}
+
+.sticky-righ-hide {
+    transform: translateX(145px);
+}
+
+.sticky-right-close-hide {
+    transform: rotate(-180deg);
 }

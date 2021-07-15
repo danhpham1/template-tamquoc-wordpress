@@ -42,9 +42,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-    height: 233px;
-    position: relative;
-    background-position: center;
+	height: 233px;
+	position: relative;
+	background-position: center;
 }
 
 .header--container{
@@ -57,8 +57,8 @@
 
 .header--icon{
 	position: absolute;
-	left: -40px;
-    top: 25px;
+	left: -245px;
+	top: 25px;
 }
 
 .header--icon img{
@@ -79,30 +79,42 @@
 
 .header .logo{
 	position: absolute;
-    top: 50px;
-    left: 250px;
-    width: 220px;
+	top: 20px;
+	left: 250px;
+	width: 220px;
 }
 
 .header--nav{
 	width: 730px;
-    margin: auto;
-    position: relative;
+	margin: auto;
+	position: relative;
 }
 
 .header--fanpage{
+	display: flex;
+	flex-direction: row;
+	width: 390px;
+	top: 30px;
+	right: -285px;
 	position: absolute;
-    width: 70px;
-    height: 20px;
-    font-family: UTM Cafeta;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    color: #FFC107;
-    top: 30px;
-    right: 150px;
+}
+
+.header--fanpage a{
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.1em;
+	color: #FFC107 !important;
+	flex: 0 0 140px;
+	font-weight: bold;
+}
+
+.header--fanpage a:last-child{
+	flex: 0 0 90px !important;
+}
+
+.header--fanpage a:hover{
+	text-decoration: none;
+	color: #FFC107;
 }
 
 .header--call{
@@ -110,7 +122,7 @@
 	width: 230px;
 	height: 40px;
 	top: 15px;
-    right: -100px;
+	right: -100px;
 }
 
 .header--call img{
@@ -121,7 +133,8 @@
 .menu-header-container{
 	position: absolute;
 	top: 30px;
-    left: 10px;
+	left: -205px;
+	width: 340px;
 }
 .menu-header-container ul{
 	display: flex;
@@ -129,17 +142,118 @@
 }
 
 .menu-header-container ul li{
-	flex: 0 0 100px;
+	flex: 0 0 115px;
 }
 
 .menu-header-container ul li a{
 	width: 62px;
 	height: 20px;
-	font-family: UTM Cafeta;
+	font-family: inherit;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 17px;
 	line-height: 20px;
 	letter-spacing: 0.1em;
-	color: #FFC107;
+	color: #FFC107 !important;
+	font-weight: bold;
+}
+
+.menu-header-container ul li a:hover{
+	text-decoration: none;
+}
+
+
+.top-video{
+	position: absolute;
+	top: 250px;
+	width: 100%;
+}
+
+.top-video a{
+	display: block;
+	text-align: center;
+	max-width: 100px;
+	margin: auto;
+}
+
+.header--menu-mobile{
+	display: none;
+}
+
+.header--menu-mobile-hide{
+	display: none !important;
+}
+
+.header--menu-mobile-show{
+	display: block !important;
+}
+
+
+@media screen and (max-width: 1300px) and (min-width: 1023px) {
+	.header--icon{
+		left: -130px;
+	}
+	.menu-header-container{
+		left: -95px;
+	}
+	.header--fanpage{
+		right: -145px;
+	}
+}
+
+@media screen and (max-width: 1023px){
+	.header--icon{
+		display: none;
+	}
+	.menu-header-container{
+		display: none;
+	}
+	.header--fanpage{
+		display: none;
+	}
+	.header--menu-mobile{
+		display: block;
+	}
+	.header--menu-mobile .header--menu-bars{
+		width: 50px;
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 20px;
+	}
+
+	.header--menu-mobile .header--menu-bars i{
+		color: white;
+		font-size: 50px;
+		cursor: pointer;
+	}
+
+	.header--menu-mobile-link{
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		max-width: 100vw;
+		height: 100vh;
+		background: #333333;
+		z-index: 100;
+		display: block;
+		max-height: 100vh;
+	}
+
+	.header--menu-mobile-link a{
+		display: block;
+		font-size: 25px;
+		color: white !important;
+		padding: 20px 10px;
+		font-weight: bold;
+	}
+
+	.header--menu-mobile-link i{
+		font-size: 50px;
+	    color: white;
+	    position: absolute;
+	    top: 10px;
+	    right: 15px;
+	    cursor: pointer;
+	}
 }

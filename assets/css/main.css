@@ -1,7 +1,7 @@
 .main{
 	width: 100%;
 	position: absolute;
-	top: 800px;
+	top: 650px;
 }
 
 .main--container{
@@ -15,6 +15,16 @@
 	justify-content: space-between;
 }
 
+.main--info .main--info-left div:first-child{
+	height: 107px;
+	width: 107px;
+}
+
+.main--info .main--info-left div:first-child img{
+	width: 100%;
+	height: 100%;
+}
+
 .main--info-left{
 	display: flex;
 	flex-direction: row;
@@ -23,6 +33,7 @@
 
 .main--info-left div:first-child{
 	padding-right: 5px;
+	margin-right: 5px;
 }
 
 .main--info-left div:first-child img{
@@ -48,9 +59,21 @@
 	align-items: center;
 }
 
+.main--info-right img{
+	margin: 0px 5px;
+	width: 100px;
+    object-fit: contain;
+    max-width: 100px;
+}
+
+.main--info-right-left{
+	max-width: 150px;
+}
+
 .main--info-right .google-play,.main--info-right .apple-store{
-	width: 150px;
+	width: 100%;
 	margin-right: 10px;
+	max-width: 140px;
 }
 
 .main--info-right qr{
@@ -74,19 +97,43 @@
 
 .main--news-left img{
 	width: 100%;
+	height: 65px;
 }
 
-.main--news-left a{
-	margin: 0px 0px 59px 0px;
+.main--news-left .btn-play-now{
+	height: 120px;
+	margin-bottom: 35px;
+	border-radius: 10px;
+	border: 1px solid rgb(255, 228, 104);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.main--news-left .btn-play-now p{
+	color: rgb(73, 44, 44);
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: inherit;
+}
+
+.main-news-container{
+	display: flex;
+    flex-direction: row;
+    margin: 15px 0px;
+    height: 330px;
 }
 
 .main--news-center{
-	width: 45%;
+	width: 50%;
 	padding: 10px;
 	background: white;
-	margin: 0px 10px;
+	margin: 0px 5px 0px 10px;
 	background: #FFFFFF;
 	box-shadow: 0px 0px 6px #000000;
+	position: relative;
 }
 
 
@@ -156,9 +203,9 @@
 
 .news--main-top div:first-child a{
 	flex-flow: row nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	font-size: 16px;
 	line-height: 26px;
 	text-transform: capitalize;
@@ -186,7 +233,7 @@
 
 .main--news-tabs hr{
 	margin: 10px 0px;
-    border: 0.5px dashed #888888;
+	border: 0.5px dashed #888888;
 }
 
 .main--news-items{
@@ -198,23 +245,23 @@
 
 .main--news-items .item--title{
 	overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    margin-right: 20px;
-    font-size: 15px;
-    line-height: 19px;
-    letter-spacing: 0.05em;
-    color: #959387;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	margin-right: 20px;
+	font-size: 15px;
+	line-height: 19px;
+	letter-spacing: 0.05em;
+	color: #959387;
 }
 
 .main--news-items .item--date{
 	font-size: 14px;
-    line-height: 18px;
-    text-align: right;
-    letter-spacing: 0.05em;
-    color: #959387;
+	line-height: 18px;
+	text-align: right;
+	letter-spacing: 0.05em;
+	color: #959387;
 }
 
 .show{
@@ -230,15 +277,70 @@
 .w3-badge {height:13px;width:13px;padding:0}
 
 .main--news-right{
-	width: 35%;
-    height: 300px;
+	width: 50%;
+	height: 100%;
 }
 
 .main--news-right .mySlides{
 	width: 100%;
-	height: 300px;
+	height: 100%;
+}
+
+.main--news-seemore{
+	text-align: center;
+	padding: 10px;
+	background: #862c20;
+	text-transform: capitalize;
+	font-weight: 600;
+	border: none;
+	border-radius: 10px;
+	position: absolute;
+	width: 95%;
+	bottom: 10px;
+}
+
+.main--news-seemore a{
+	display: block;
+	color: white !important;
 }
 
 .w3-badge, .w3-tag{
 	height: 18px;
+}
+
+.btn-play-now{
+	background-image: url("../images/bg-btn-play-now.png");
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main--arrow{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main--arrow .main--arrow-left,.main--arrow .main--arrow-right{
+	width: 280px;
+    margin-top: 50px;
+}
+
+.main--arrow .main--arrow-left{
+	margin-left: -30px;
+}
+
+.main--arrow .main--arrow-right{
+	margin-right: -30px;
+}
+
+.main--arrow .main--arrow-btn-playnow{
+	margin: 0px 35px;
+}
+
+.main--arrow .main--arrow-btn-playnow img{
+	width: 100%; 
+    height: auto;
 }

@@ -1,7 +1,7 @@
 <div class="footer-bottom">
 	<div class="footer-bottom-container">
 		<div class="footer-bottom-top">
-			<a href="#">Điều Khoản Sử Dụng</a>
+			<a href="/dieu-khoan">Điều Khoản Sử Dụng</a>
 			<a href="#">Cài Đặt & Gỡ Bỏ</a>
 			<a href="#">Bảo Mật</a>
 			<a href="#">Thanh Toán</a>

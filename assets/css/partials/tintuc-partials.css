@@ -1,7 +1,7 @@
 .main{
 	width: 100%;
 	position: absolute;
-	top: 650px;
+	top: 600px;
 }
 
 .main--container{
@@ -15,6 +15,16 @@
 	justify-content: space-between;
 }
 
+.main--info .main--info-left div:first-child{
+	height: 107px;
+	width: 107px;
+}
+
+.main--info .main--info-left div:first-child img{
+	width: 100%;
+	height: 100%;
+}
+
 .main--info-left{
 	display: flex;
 	flex-direction: row;
@@ -23,6 +33,7 @@
 
 .main--info-left div:first-child{
 	padding-right: 5px;
+	margin-right: 5px;
 }
 
 .main--info-left div:first-child img{
@@ -48,19 +59,68 @@
 	align-items: center;
 }
 
+.main--info-right img{
+	margin: 0px 5px;
+	width: 100px;
+    object-fit: contain;
+    max-width: 100px;
+}
+
+.main--info-right-left{
+	max-width: 150px;
+}
+
 .main--info-right .google-play,.main--info-right .apple-store{
-	width: 150px;
+	width: 100%;
 	margin-right: 10px;
+	max-width: 140px;
 }
 
 .main--info-right qr{
 	width: 90px;
 }
 
+.btn-play-now{
+	background-image: url("../images/bg-btn-play-now.png");
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main--arrow{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main--arrow .main--arrow-left,.main--arrow .main--arrow-right{
+	width: 280px;
+    margin-top: 50px;
+}
+
+.main--arrow .main--arrow-left{
+	margin-left: -30px;
+}
+
+.main--arrow .main--arrow-right{
+	margin-right: -30px;
+}
+
+.main--arrow .main--arrow-btn-playnow{
+	margin: 0px 35px;
+}
+
+.main--arrow .main--arrow-btn-playnow img{
+	width: 100%; 
+    height: auto;
+}
+
 .tintuc-main{
 	width: 100%;
 	max-width: 100vw;
-	min-height: 100vh;
+	min-height: 50vh;
 	background: rgb(247, 236, 204);
 }
 
@@ -69,24 +129,17 @@
 	margin: auto;
 	padding: 30px 0px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
 .tituc-main--left{
-	width: 300px;
-	height: 100%;
-}
-
-.tituc-main--left div{
-	width: 300px;
-	height: 150px;
-}
-
-.tituc-main--left div img{
 	width: 100%;
-	height: 100%;
-	border-radius: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 20px 30px 20px;	height: 100%;
 }
+
 
 .tituc-main--left .tituc-main--left--bottom{
 	width: 300px;
@@ -96,23 +149,16 @@
 	margin-top: 10px;
 }
 
-.tituc-main--left div:last-child div{
-	width: 150px;
-	height: auto;
+.tituc-main--left a img{
+	width: 250px;
+	height: 80px;
+	border-radius: 15px;
 }
 
-.tituc-main--left div:last-child div:first-child{
-	margin-right: 10px;
-}
-
-.tituc-main--left div:last-child div img{
-	width: 145px;
-	height: 60px;
-}
 
 .tituc-main--right{
 	width: 100%;
-	min-height: 100vh;
+	min-height: 50vh;
 	height: 100%;
 	padding: 0px 20px;
 }
@@ -149,8 +195,8 @@
 	padding-right: 50px;
 	word-break: break-word;
 	font-weight: 600;
-	font-size: 14px;
-	color: black;
+	font-size: 20px;
+	color: black !important;
 }
 
 .pagination{
@@ -158,7 +204,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	margin-top: 20px;
+	margin-top: 50px;
 }
 
 .pagination li a{
@@ -170,39 +216,61 @@
 
 /*.pagination li a:hover{
 	color: white;
-}*/
+	}*/
 
-.pagination li:hover,.pagination li a:hover{
-	background: red;
-	color: white;
-}
+	.pagination li:hover,.pagination li a:hover{
+		background: red;
+		color: white;
+	}
 
-.pagination li:hover{
-	border: 0.5px solid black;
-}
+	.pagination li:hover{
+		border: 0.5px solid black;
+	}
 
-.first,.pre,.page,.next,.last{
-	padding: 5px 15px;
-	color: black;
-	border: 0.5px solid black;
-}
+	.first,.pre,.page,.next,.last{
+		padding: 5px 15px;
+		color: black;
+		border: 0.5px solid black;
+	}
 
-.first{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
+	.first{
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
 
-.last{
-	border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
+	.last{
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
 
-.active{
-	background: red;
-	color: white;
-	border: 0.5px solid black;
-}
+	.active{
+		background: red;
+		color: white;
+		border: 0.5px solid black;
+	}
 
-.active-text{
-	color: white !important;
-}
+	.active-text{
+		color: white !important;
+	}
+
+	.btn-play-now{
+		background-image: url("../../images/bg-btn-play-now.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 80px;
+		border-radius: 15px;
+		border: 1px solid rgb(255, 228, 104);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 250px;
+	}
+
+	.btn-play-now p{
+		color: rgb(73, 44, 44);
+		font-size: 25px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: sans-serif;
+	}

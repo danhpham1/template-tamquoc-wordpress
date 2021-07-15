@@ -1,3 +1,4 @@
+  <div class="top">
     <div class="top--bg1">
     </div>
     <div class="header">
@@ -16,11 +17,32 @@
               ) 
             ); ?> 
             <img class="logo" src="<?php bloginfo('template_url');?>/assets/images/logo.png">
-            <a class="header--fanpage" href="#">FanPage</a>
-            <div class="header--call">
-              <img src="<?php bloginfo('template_url');?>/assets/images/header-call.png">
+            <div class="header--fanpage">
+              <a  href="#">GIỚI THIỆU</a>
+              <a  href="#">CỘNG ĐỒNG</a>
+              <a  href="#">THƯ VIỆN</a>
             </div>
+          </div>
+        </div>
+        <div class="header--menu-mobile">
+          <a class="header--menu-bars" href="javascript:void(0);" class="icon" onclick="openBar()">
+            <i class="fa fa-bars"></i>
+          </a>
+          <div class="header--menu-mobile-link header--menu-mobile-hide">
+            <a  href="#">TIN TỨC</a>
+            <a  href="#">SỰ KIỆN</a>
+            <a  href="#">HƯỚNG DẪN</a>
+            <a  href="#">GIỚI THIỆU</a>
+            <a  href="#">CỘNG ĐỒNG</a>
+            <a  href="#">THƯ VIỆN</a>
+            <i class="fas fa-times" onclick="closeBar()"></i>
           </div>
         </div>
       </div>
     </div>
+    <div class="top-video">
+      <a data-fancybox href="https://www.youtube.com/watch?v=m-PJmmvyP10">
+        <img src="<?php bloginfo('template_url');?>/assets/images/play.png" alt="">
+      </a>
+    </div>
+  </div>

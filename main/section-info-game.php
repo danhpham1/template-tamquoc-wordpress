@@ -1,5 +1,10 @@
 <div class="main">
 	<div class="main--container">
+		<div class="main--arrow">
+			<img class="main--arrow-left" src="<?php bloginfo('template_url');?>/assets/images/main-arrow-left.png">
+			<a class="main--arrow-btn-playnow" href="#"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a>
+			<img class="main--arrow-right" src="<?php bloginfo('template_url');?>/assets/images/main-arrow-right.png">
+		</div>
 		<div class="main--info">
 			<div class="main--info-left">
 				<div>
@@ -11,23 +16,27 @@
 				</div>
 			</div>
 			<div class="main--info-right">
-				<img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img>
-				<img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img>
+				<div class="main--info-right-left">
+					<img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img>
+					<img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img>
+				</div>
 				<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr.png"></img>
+				<img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png">
+				<img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png">
 			</div>
 		</div>
-
-		<div class="main--news">
-			<div class="main--news-left">
-				<a href="#">
-					<img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png">
-				</a>
-				<a href="#">
-					<img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png">
-				</a>
-				<a href="#">
-					<img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png">
-				</a>
+		<div class="main-news-container">
+			<div class="main--news-right">
+				<div class="w3-content w3-display-container">
+					<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
+					<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
+					<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
+					<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+						<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+						<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+						<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+					</div>
+				</div>
 			</div>
 			<div class="main--news-center">
 				<div id="tabs" class="main--news-tabs">
@@ -42,13 +51,14 @@
 						$isThumbnails = false;
 						$current_ID ;
 						$args = array(
-							'posts_per_page' => 4,
 							'category_name' => 'tin-tuc',
+							'posts_per_page' => 4,
+							'nopaging' => true
 						);
 						$tintuc = new WP_Query( $args );
 						if($tintuc->have_posts()){ ?>
 							<?php
-							while ( $tintuc->have_posts() ) {
+							while ( $tintuc->have_posts() && ($tintuc->current_post < 3) ) {
 								$tintuc->the_post();
 								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
@@ -81,15 +91,17 @@
 								<?php	
 							}
 							wp_reset_postdata();
+							wp_reset_query();
 							$args1 = array(
-								'posts_per_page' => 4,
 								'category_name' => 'tin-tuc',
+								'posts_per_page' => 4,
+								'nopaging' => true
 							);
 							$tintuc = new WP_Query( $args1 );
-							while ( $tintuc->have_posts() ) {
+							while ( $tintuc->have_posts() && ($tintuc->current_post < 3)) {
 								$tintuc->the_post();
 								if($GLOBALS['isThumbnails']){
-									if(($tintuc->current_post != $tintuc->post_count - 1) && ($GLOBALS['current_ID'] != $tintuc->current_post)){ ?>
+									if(($tintuc->current_post != 3) && ($GLOBALS['current_ID'] != $tintuc->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -102,7 +114,7 @@
 										<?php 
 									} 
 
-									if(($tintuc->current_post == $tintuc->post_count - 1) && ($GLOBALS['current_ID'] != $tintuc->current_post)){ ?>
+									if(($tintuc->current_post == 3) && ($GLOBALS['current_ID'] != $tintuc->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -114,7 +126,7 @@
 										<?php
 									}
 								}else{
-									if(($tintuc->current_post != $tintuc->post_count - 1)){ ?>
+									if(($tintuc->current_post != 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -127,7 +139,7 @@
 										<?php 
 									} 
 
-									if(($tintuc->current_post == $tintuc->post_count - 1)){ ?>
+									if(($tintuc->current_post == 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -145,6 +157,9 @@
 							echo "<p style='width:100%;text-align:center'>Không có bài viết nào</p>";
 						}
 						?>
+					<div class="main--news-seemore">
+						<a href="/tin-tuc">Xem thêm <i class="fa fa-plus" aria-hidden="true"></i></a>
+					</div>
 					</div>
 					<div id="tabs-2" class="main--news-content">
 						<?php 
@@ -157,7 +172,7 @@
 						$sukien = new WP_Query( $args );
 						if($sukien->have_posts()){ ?>
 							<?php
-							while ( $sukien->have_posts() ) {
+							while ( $sukien->have_posts() && ($sukien->current_post < 3)) {
 								$sukien->the_post();
 								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
@@ -195,10 +210,10 @@
 								'category_name' => 'su-kien',
 							);
 							$sukien = new WP_Query( $args1 );
-							while ( $sukien->have_posts() ) {
+							while ( $sukien->have_posts() && ($sukien->current_post < 3)) {
 								$sukien->the_post();
 								if($GLOBALS['isThumbnailsSuKien']){
-									if(($sukien->current_post != $sukien->post_count - 1) && ($GLOBALS['current_IDSuKien'] != $sukien->current_post)){ ?>
+									if(($sukien->current_post != 3) && ($GLOBALS['current_IDSuKien'] != $sukien->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -211,7 +226,7 @@
 										<?php 
 									} 
 
-									if(($sukien->current_post == $sukien->post_count - 1) && ($GLOBALS['current_IDSuKien'] != $sukien->current_post)){ ?>
+									if(($sukien->current_post == 3) && ($GLOBALS['current_IDSuKien'] != $sukien->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -223,7 +238,7 @@
 										<?php
 									}
 								}else{
-									if(($sukien->current_post != $sukien->post_count - 1)){ ?>
+									if(($sukien->current_post != 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -236,7 +251,7 @@
 										<?php 
 									} 
 
-									if(($sukien->current_post == $sukien->post_count - 1)){ ?>
+									if(($sukien->current_post == 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -254,6 +269,9 @@
 							echo "<p style='width:100%;text-align:center'>Không có bài viết nào</p>";
 						}
 						?>
+					<div class="main--news-seemore">
+						<a href="/su-kien">Xem thêm <i class="fa fa-plus" aria-hidden="true"></i></a>
+					</div>
 					</div>
 					<div id="tabs-3" class="main--news-content">
 						<?php 
@@ -266,7 +284,7 @@
 						$huongdan = new WP_Query( $args );
 						if($huongdan->have_posts()){ ?>
 							<?php
-							while ( $huongdan->have_posts() ) {
+							while ( $huongdan->have_posts() && ($huongdan->current_post < 3)) {
 								$huongdan->the_post();
 								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
@@ -304,10 +322,10 @@
 								'category_name' => 'huong-dan',
 							);
 							$huongdan = new WP_Query( $args1 );
-							while ( $huongdan->have_posts() ) {
+							while ( $huongdan->have_posts() && ($huongdan->current_post < 3)) {
 								$huongdan->the_post();
 								if($GLOBALS['isThumbnailsHuongDan']){
-									if(($huongdan->current_post != $huongdan->post_count - 1) && ($GLOBALS['current_IDHuongDan'] != $huongdan->current_post)){ ?>
+									if(($huongdan->current_post != 3) && ($GLOBALS['current_IDHuongDan'] != $huongdan->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -320,7 +338,7 @@
 										<?php 
 									} 
 
-									if(($huongdan->current_post == $huongdan->post_count - 1) && ($GLOBALS['current_IDHuongDan'] != $huongdan->current_post)){ ?>
+									if(($huongdan->current_post == 3) && ($GLOBALS['current_IDHuongDan'] != $huongdan->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -332,7 +350,7 @@
 										<?php
 									}
 								}else{
-									if(($huongdan->current_post != $huongdan->post_count - 1)){ ?>
+									if(($huongdan->current_post != 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -345,7 +363,7 @@
 										<?php 
 									} 
 
-									if(($huongdan->current_post == $huongdan->post_count - 1)){ ?>
+									if(($huongdan->current_post == 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -363,6 +381,9 @@
 							echo "<p style='width:100%;text-align:center'>Không có bài viết nào</p>";
 						}
 						?>
+					<div class="main--news-seemore">
+						<a href="/huong-dan">Xem thêm <i class="fa fa-plus" aria-hidden="true"></i></a>
+					</div>
 					</div>
 					<div id="tabs-4" class="main--news-content">
 						<?php 
@@ -375,7 +396,7 @@
 						$camnang = new WP_Query( $args );
 						if($camnang->have_posts()){ ?>
 							<?php
-							while ( $camnang->have_posts() ) {
+							while ( $camnang->have_posts() && ($camnang->current_post < 3)) {
 								$camnang->the_post();
 								if(has_post_thumbnail() && !$isThumbnails){ ?>
 									<div class="news--main">
@@ -413,10 +434,10 @@
 								'category_name' => 'cam-nang',
 							);
 							$camnang = new WP_Query( $args1 );
-							while ( $camnang->have_posts() ) {
+							while ( $camnang->have_posts() && ($camnang->current_post < 3)) {
 								$camnang->the_post();
 								if($GLOBALS['isThumbnailsCamNang']){
-									if(($camnang->current_post != $camnang->post_count - 1) && ($GLOBALS['current_IDCamnang'] != $camnang->current_post)){ ?>
+									if(($camnang->current_post != 3) && ($GLOBALS['current_IDCamnang'] != $camnang->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -429,7 +450,7 @@
 										<?php 
 									} 
 
-									if(($camnang->current_post == $camnang->post_count - 1) && ($GLOBALS['current_IDCamnang'] != $camnang->current_post)){ ?>
+									if(($camnang->current_post == 3) && ($GLOBALS['current_IDCamnang'] != $camnang->current_post)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -441,7 +462,7 @@
 										<?php
 									}
 								}else{
-									if(($camnang->current_post != $camnang->post_count - 1)){ ?>
+									if(($camnang->current_post != 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -454,7 +475,7 @@
 										<?php 
 									} 
 
-									if(($camnang->current_post == $camnang->post_count - 1)){ ?>
+									if(($camnang->current_post == 3)){ ?>
 										<div class="main--news-items">
 											<p class="item--title">
 												<a href="<?php the_permalink(); ?>">
@@ -472,18 +493,9 @@
 							echo "<p style='width:100%;text-align:center'>Không có bài viết nào</p>";
 						}
 						?>
+					<div class="main--news-seemore">
+						<a href="/cam-nang">Xem thêm <i class="fa fa-plus" aria-hidden="true"></i></a>
 					</div>
-				</div>
-			</div>
-			<div class="main--news-right">
-				<div class="w3-content w3-display-container">
-					<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
-					<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
-					<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
-					<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-						<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-						<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-						<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
 					</div>
 				</div>
 			</div>

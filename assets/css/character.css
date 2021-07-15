@@ -68,7 +68,8 @@
 	width: 730px;
 	position: relative;
 	margin: auto;
-	top: -130px;
+	top: -45px;
+	left: -15px;
 }
 
 .skill-1, .skill-2, .skill-3{
@@ -85,32 +86,41 @@
 }
 
 .skill-1{
-	top: 230px;
-	left: 40px;
+	top: 185px;
+	left: 100px;
 }
 
 .skill-2{
-	top: 450px;
-	left: -20px;
+	top: 350px;
+	left: 33px;
 }
 
 .skill-3{
-	top: 655px;
-	left: 65px;
+	top: 505px;
+	left: 80px;
 }
 
 .bg--text-skill{
 	position: absolute;
-	width: 255px;
-	height: 115px;
+	width: 280px;
+    height: auto;
+    border: 1px solid #d7b558;
+    background: #C6231A;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.bg--text-skill div{
-	background-image: url("../images/bg_textbox_skill.png");
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
+.bg--text-skill::before{
+	content: "";
+	display: block;
+    width: 0;
+    position: absolute;
+    top: -20px;
+    margin: 0 auto;
+    left: -145px;
+    right: 0;
+    border: solid 10px #d7b558;
+    border-color: transparent transparent #C6231A transparent;
 }
 
 .bg--text-skill div .skill-title{
@@ -126,32 +136,26 @@
 	line-height: 20px;
 	text-align: center;
 	color: #FFFFFF;
-	padding: 0px 0px 10px 0px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-webkit-line-clamp: 2;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	max-height: 40px;
+	padding: 0px 5px 10px 0px;
 }
 
 .text-skill-1{
-	top: 330px;
-	left: 40px;
+	top: 300px;
+	left: 85px;
 	display: none;
-	z-index: 2;
+	z-index: 100;
 }
 
 .text-skill-2{
-	top: 550px;
-	left: -15px;
+	top: 465px;
+	left: 25px;
 	display: none;
-	z-index: 2;
+	z-index: 100;
 }
 
 .text-skill-3{
-	top: 755px;
-	left: 65px;
+	top: 620px;
+	left: 70px;
 	display: none;
 	z-index: 2;
 }
@@ -171,7 +175,7 @@
 
 .character--info{
 	position: absolute;
-	top: 260px;
+	top: 190px;
 	right: 0px;
 	width: 200px;
 	height: 443px;
@@ -195,6 +199,11 @@
 	text-align: center;
 	color: #FFFFD7;
 	padding: 5px 20px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 .character-system--button{
@@ -203,7 +212,7 @@
     justify-content: space-between;
     position: absolute;
     width: 106%;
-    top: 740px;
+    top: 745px;
     left: -35px;
 }
 

@@ -1,0 +1,22 @@
+.top-btn{
+	font-size: 20px;
+	position: fixed;
+	bottom: -100px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background: #f6a628;
+	padding: 5px 20px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	font-weight: 600;
+	transition: bottom 0.4s;
+}
+
+.top-btn-active{
+	bottom: -30px;
+}
