@@ -1,6 +1,9 @@
   <div class="top">
     <div class="top--bg1">
     </div>
+    <div class="top-18">
+      <img src="<?php bloginfo('template_url');?>/assets/images/18+.png">
+    </div>
     <div class="header">
       <div class="header--container">
         <div class="header--menu">
@@ -29,9 +32,9 @@
             <i class="fa fa-bars"></i>
           </a>
           <div class="header--menu-mobile-link header--menu-mobile-hide">
-            <a  href="#">TIN TỨC</a>
-            <a  href="#">SỰ KIỆN</a>
-            <a  href="#">HƯỚNG DẪN</a>
+            <a  href="/tin-tuc">TIN TỨC</a>
+            <a  href="/su-kien">SỰ KIỆN</a>
+            <a  href="/huong-dan">HƯỚNG DẪN</a>
             <a  href="#">GIỚI THIỆU</a>
             <a  href="#">CỘNG ĐỒNG</a>
             <a  href="#">THƯ VIỆN</a>
