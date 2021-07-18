@@ -134,7 +134,7 @@
 .bg--text-skill div p:last-child{
 	font-size: 11px;
 	line-height: 20px;
-	text-align: center;
+	text-align: start;
 	color: #FFFFFF;
 	padding: 0px 5px 10px 0px;
 }

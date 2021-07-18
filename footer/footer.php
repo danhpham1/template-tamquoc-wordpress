@@ -2,7 +2,7 @@
 	<div class="footer-container">
 		<div class="footer-title">
 			<img class="footer-title--hr-left" src="<?php bloginfo('template_url');?>/assets/images/hr-left.png">
-			<p>Hệ Thống Nhân Vật</p>
+			<p>Tính năng đặc sắc</p>
 			<img class="footer-title--hr-left" src="<?php bloginfo('template_url');?>/assets/images/hr-right.png">
 		</div>
 		<div class="footer-content">

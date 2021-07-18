@@ -63,18 +63,19 @@
 
 .footer-content--title p{
 	font-size: 18px;
-	line-height: 38px;
 	text-transform: uppercase;
 	color: #F2C161;
 	padding-left: 30px;
+	margin-bottom: -10px;
+	font-weight: bold;
 }
 
 .footer-content--left--bottom{
-	margin-top: 15px;
+	margin-top: 40px;
 }
 
 .footer-content--right--bottom{
-	margin-top: 15px;
+	margin-top: 40px;
 }
 
 .footer-news .footer-news-video {
