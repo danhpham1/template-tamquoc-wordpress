@@ -62,8 +62,8 @@
 .main--info-right img{
 	margin: 0px 5px;
 	width: 100px;
-    object-fit: contain;
-    max-width: 100px;
+	object-fit: contain;
+	max-width: 100px;
 }
 
 .main--info-right-left{
@@ -90,14 +90,14 @@
 
 .main--arrow{
 	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 .main--arrow .main--arrow-left,.main--arrow .main--arrow-right{
 	width: 280px;
-    margin-top: 50px;
+	margin-top: 50px;
 }
 
 .main--arrow .main--arrow-left{
@@ -114,7 +114,7 @@
 
 .main--arrow .main--arrow-btn-playnow img{
 	width: 100%; 
-    height: auto;
+	height: auto;
 }
 
 .tintuc-main{
@@ -174,7 +174,7 @@
 }
 
 .tintuc-item{
-	padding: 30px 0px;
+	padding: 5px 0px 15px 0px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -199,6 +199,12 @@
 	color: black !important;
 }
 
+.tintuc-item-title{
+	margin: 5px 0px 0px 0px;;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
 .pagination{
 	display: flex;
 	flex-direction: row;
@@ -214,63 +220,89 @@
 }
 
 
-/*.pagination li a:hover{
+.pagination li:hover,.pagination li a:hover{
+	background: red;
 	color: white;
-	}*/
+}
 
-	.pagination li:hover,.pagination li a:hover{
-		background: red;
-		color: white;
-	}
+.pagination li:hover{
+	border: 0.5px solid black;
+}
 
-	.pagination li:hover{
-		border: 0.5px solid black;
-	}
+.first,.pre,.page,.next,.last{
+	padding: 5px 15px;
+	color: black;
+	border: 0.5px solid black;
+}
 
-	.first,.pre,.page,.next,.last{
-		padding: 5px 15px;
-		color: black;
-		border: 0.5px solid black;
-	}
+.first{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
 
-	.first{
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
-	}
+.last{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
 
-	.last{
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
-	}
+.active{
+	background: red;
+	color: white;
+	border: 0.5px solid black;
+}
 
-	.active{
-		background: red;
-		color: white;
-		border: 0.5px solid black;
-	}
+.active-text{
+	color: white !important;
+}
 
-	.active-text{
-		color: white !important;
-	}
+.btn-play-now{
+	background-image: url("../../images/bg-btn-play-now.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 80px;
+	border-radius: 15px;
+	border: 1px solid rgb(255, 228, 104);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+}
 
-	.btn-play-now{
-		background-image: url("../../images/bg-btn-play-now.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		height: 80px;
-		border-radius: 15px;
-		border: 1px solid rgb(255, 228, 104);
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		width: 250px;
-	}
+.btn-play-now p{
+	color: rgb(73, 44, 44);
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
 
-	.btn-play-now p{
-		color: rgb(73, 44, 44);
-		font-size: 25px;
-		font-weight: bold;
-		text-transform: uppercase;
-		font-family: sans-serif;
-	}
+
+/*custom tabs*/
+
+.tituc-main--container .tabs{
+	padding: 0px 20px;
+	width: 100%;
+}
+
+.tituc-main--container .tabs ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+}
+
+.tituc-main--container .tabs ul li{
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.tabs-active{
+	border-bottom: 2px solid;
+}
+
+.tabs-a-active{
+	color: black !important;
+}
+

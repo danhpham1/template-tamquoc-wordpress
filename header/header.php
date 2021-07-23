@@ -32,6 +32,7 @@
             <i class="fa fa-bars"></i>
           </a>
           <div class="header--menu-mobile-link header--menu-mobile-hide">
+            <a  href="/">TRANG CHỦ</a>
             <a  href="/tin-tuc">TIN TỨC</a>
             <a  href="/su-kien">SỰ KIỆN</a>
             <a  href="/huong-dan">HƯỚNG DẪN</a>
