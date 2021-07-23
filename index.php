@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc</title>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/header.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/main.css" />
@@ -44,7 +45,7 @@
                     </a>
                 </div>
                 <div class="sticky-right-btn btn-chplay">
-                    <a href="#">
+                    <a href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">
                         <img src="<?php bloginfo('template_url');?>/assets/images/fanpage-btn.png" alt="">
                     </a>
                 </div>

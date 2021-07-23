@@ -19,8 +19,8 @@
             <img class="logo" src="<?php bloginfo('template_url');?>/assets/images/logo.png">
             <div class="header--fanpage">
               <a  href="#">GIỚI THIỆU</a>
-              <a  href="#">CỘNG ĐỒNG</a>
-              <a  href="#">THƯ VIỆN</a>
+              <a  href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">CỘNG ĐỒNG</a>
+              <a  href="/tamquoc/thu-vien">THƯ VIỆN</a>
             </div>
           </div>
         </div>
@@ -34,8 +34,8 @@
             <a  href="/su-kien">SỰ KIỆN</a>
             <a  href="/huong-dan">HƯỚNG DẪN</a>
             <a  href="#">GIỚI THIỆU</a>
-            <a  href="#">CỘNG ĐỒNG</a>
-            <a  href="#">THƯ VIỆN</a>
+            <a  href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">CỘNG ĐỒNG</a>
+            <a  href="/tamquoc/thu-vien">THƯ VIỆN</a>
             <i class="fas fa-times" onclick="closeBar()"></i>
           </div>
         </div>

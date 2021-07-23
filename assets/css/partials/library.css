@@ -1,0 +1,56 @@
+.tituc-main--container .tabs ul {
+    justify-content: normal;
+}
+
+.tituc-main--container .tabs ul li{
+    margin-right: 20px;
+}
+
+.list-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list-img li{
+    margin-right: 45px;
+    max-width: 240px;
+    width: 240px;
+    max-height: 180px;
+    margin-top: 10px;
+}
+
+.list-img li a .post-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.list-img li a .post-img .post-mask{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: rgba(0,0,0,0.2) url('../../images/mask.png') center center no-repeat;
+    background-size: contain;
+}
+
+.list-img li a .post-img img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.list-img li a:hover span img{
+    transform: scale(1.1);
+}
+
+.list-img li a:hover span .post-mask{
+    background: none;
+}

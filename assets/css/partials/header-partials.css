@@ -16,7 +16,7 @@
 	position: absolute;
 	top: -30px;
 	background-position: center;
-	background-position-y: -60px;
+	background-position-y: 30px;
 }
 
 .top--bg--partials{
@@ -42,7 +42,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 233px;
+	height: 195px;
 	position: relative;
 	background-position: center;
 }
@@ -58,7 +58,7 @@
 .header--icon{
 	position: absolute;
 	left: -245px;
-	top: 25px;
+	top: 10px;
 }
 
 .header--icon img{
@@ -79,7 +79,7 @@
 
 .header .logo{
 	position: absolute;
-	top: 20px;
+	top: 10px;
 	left: 250px;
 	width: 220px;
 }
@@ -94,7 +94,7 @@
 	display: flex;
 	flex-direction: row;
 	width: 390px;
-	top: 30px;
+	top: 15px;
 	right: -285px;
 	position: absolute;
 }
@@ -132,7 +132,7 @@
 /*menu*/
 .menu-header-container{
 	position: absolute;
-	top: 30px;
+	top: 15px;
 	left: -205px;
 	width: 340px;
 }
@@ -178,7 +178,7 @@
 
 .top-video a img{
 	width: 60px;
-    margin-right: 40px;
+	margin-right: -150px;
 }
 
 .header--menu-mobile{
@@ -196,10 +196,10 @@
 
 @media screen and (max-width: 1300px) and (min-width: 1023px) {
 	.header--icon{
-		left: -130px;
+		left: -140px;
 	}
 	.menu-header-container{
-		left: -95px;
+		left: -105px;
 	}
 	.header--fanpage{
 		right: -145px;
@@ -207,6 +207,17 @@
 }
 
 @media screen and (max-width: 1023px){
+	/*bg*/
+	.top--bg1{
+		background-size: 130% 175%;
+		background-position-y: 50px;
+	}
+	.top-video {
+		top: 220px;
+	}
+	.top-video a img {
+		margin-right: -105px;
+	}
 	.header--icon{
 		display: none;
 	}
@@ -229,7 +240,7 @@
 
 	.header--menu-mobile .header--menu-bars i{
 		color: white;
-		font-size: 50px;
+		font-size: 35px;
 		cursor: pointer;
 	}
 
@@ -251,14 +262,31 @@
 		color: white !important;
 		padding: 20px 10px;
 		font-weight: bold;
+		width: 80%;
 	}
 
 	.header--menu-mobile-link i{
 		font-size: 50px;
-	    color: white;
-	    position: absolute;
-	    top: 10px;
-	    right: 15px;
-	    cursor: pointer;
+		color: white;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		cursor: pointer;
+	}
+
+	.top-18{
+		width: 150px;
+		top: 190px;
+	}
+
+	.main--arrow {
+		margin: -50px 0px;
+	}
+
+	.main--arrow .main--arrow-left, .main--arrow .main--arrow-right {
+		margin-top: 40px;
+	}
+	.main--info {
+		margin-top: 0px;
 	}
 }

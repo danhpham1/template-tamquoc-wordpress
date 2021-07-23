@@ -9,6 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc - Điều Khoản Sử Dụng Dịch Vụ</title>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/post-partials.css" />

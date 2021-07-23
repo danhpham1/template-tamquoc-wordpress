@@ -17,9 +17,9 @@
 					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 						</div>
 						<div class="footer-news-title"> 
-					  		<p>CHIÊU mộ danh tướng Lorem ipsum dolor sit amet</p>
+					  		<p><a href="https://tamquoc.itap.vn/chieu-mo-danh-tuong/">CHIÊU MỘ DANH TƯỚNG</a></p>
 					  		<span>
-					  			orem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+					  			CHIÊU MỘ DANH TƯỚNG: Tìm đến Trà Quán nơi để chiêu mộ võ tướng trợ giúp chống phá giặc Hoàng Cân. Sau khi tu sửa, có thể dùng Chiêu Mộ Lệnh để triệu hồi các danh tướng Tam Quốc.
 					  		</span>
 						</div>
 					</div>
@@ -34,9 +34,9 @@
 					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 						</div>
 						<div class="footer-news-title"> 
-					  		<p>CHIÊU mộ danh tướng Lorem ipsum dolor sit amet</p>
+					  		<p><a href="https://tamquoc.itap.vn/chien-dich-lich-su/">CHIẾN DỊCH LỊCH SỬ</a></p>
 					  		<span>
-					  			orem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					  			CHIẾN DỊCH LỊCH SỬ: Chiến Dịch Lịch Sử mỗi tuần khiêu chiến các Võ Tướng 1 phe trong Tam Quốc để dẹp Loạn Hoàng Cân. Chiến thuật cân não chọn ra trận hình Võ Tướng khắc chế các ải.
 					  		</span>
 						</div>
 					</div>
@@ -53,9 +53,9 @@
 					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 						</div>
 						<div class="footer-news-title"> 
-					  		<p>CHIÊU mộ danh tướng Lorem ipsum dolor sit amet</p>
+					  		<p><a href="https://tamquoc.itap.vn/tuong-duong-chien/">TƯƠNG DƯƠNG CHIẾN</a></p>
 					  		<span>
-					  			orem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+					  			TƯƠNG DƯƠNG CHIẾN: Quần Anh tập kết giao chiến tại chiến trường Tương Dương Chiến. Các Quốc Gia tham gia chiếm Tiễn Tháp, Cổng Thành và Đại Điện để phân định Quốc Gia chiến thắng Tương Dương Chiến.
 					  		</span>
 						</div>
 					</div>
@@ -70,9 +70,9 @@
 					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 						</div>
 						<div class="footer-news-title"> 
-					  		<p>CHIÊU mộ danh tướng Lorem ipsum dolor sit amet</p>
+					  		<p><a href="https://tamquoc.itap.vn/huyet-chien-quan-hung/">CHIẾN QUẦN HÙNG</a></p>
 					  		<span>
-					  			orem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					  			CHIẾN QUẦN HÙNG: Huyết Chiến Quần Hùng tiêu diệt Boss Thế Giới với lực chiến siêu khủng mỗi ngày. Sát thương tích lũy càng cao phần thưởng càng nhiều. Hoạt động không thể bỏ lỡ mỗi ngày.
 					  		</span>
 						</div>
 					</div>
