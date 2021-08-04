@@ -41,4 +41,11 @@ function wpdocs_after_setup_theme() {
     add_theme_support( 'html5', array( 'search-form' ) );
 }
 add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
+function title_filter( $where, &$wp_query ){
+    global $wpdb;
+    if ( $search_term = $wp_query->get( 'search_prod_title' ) ) {
+        $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql( like_escape( $search_term ) ) . '%\'';
+    }
+    return $where;
+}
 ?>

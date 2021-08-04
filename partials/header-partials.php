@@ -20,7 +20,17 @@
             <div class="header--fanpage">
               <a  href="#">GIỚI THIỆU</a>
               <a  href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">CỘNG ĐỒNG</a>
-              <a  href="/tamquoc/thu-vien">THƯ VIỆN</a>
+              <a class="fix-flex"  href="/tamquoc/thu-vien">THƯ VIỆN</a>
+              <form role="search" method="get" class="search-form" id="search-form" action="<?php echo 
+                home_url( '/' ); ?>">
+                <label  id="search-field">
+                  <input type="search" class="search-field"
+                  placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+                  value="" name="s"
+                  title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+                </label>
+                <button type="submit" class="search-submit" id="search-submit-btn"><i class="fas fa-search"></i></button> 
+              </form>
             </div>
           </div>
         </div>

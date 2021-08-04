@@ -95,7 +95,7 @@
 	flex-direction: row;
 	width: 390px;
 	top: 15px;
-	right: -285px;
+	right: -280px;
 	position: absolute;
 }
 
@@ -108,9 +108,10 @@
 	font-weight: bold;
 }
 
-.header--fanpage a:last-child{
-	flex: 0 0 90px !important;
+.header--fanpage a.fix-flex{
+	flex: 0 0 95px !important;
 }
+
 
 .header--fanpage a:hover{
 	text-decoration: none;
@@ -206,6 +207,60 @@
 	height: 100%;
 }
 
+.search-form{
+	display: flex;
+	position: relative;
+}
+
+.search-form label input{
+	display: inline-block;
+	position: absolute;
+    left: -185px;
+    top: -6px;
+    width: 0px;
+    transition: width 0.3s ease-in-out;
+    padding: 0px;
+    height: 0px;
+    border: none;
+}
+
+.search-form label input.search-input-active{
+	width: 182px;
+	display: inline-block;
+	height: 34px;;
+	border: 1px solid yellow;
+}
+
+.search-form label input:focus{
+	outline: none;
+}
+
+.search-form .search-submit{
+	background: none;
+	border: none;
+	padding: 5px;
+    position: absolute;
+    top: -5px;
+    right: -30px;
+}
+
+.search-form .search-submit.search-submit-active{
+	border: 1px solid yellow;
+    top: -6px;
+}
+
+.search-form .search-submit:focus{
+	outline: none;
+}
+
+.search-form .search-submit i{
+	color: #ffc115;
+	font-size: 20px;
+}
+
+.header--search-mobile{
+	display: none;
+}
 
 @media screen and (max-width: 1300px) and (min-width: 1023px) {
 	.header--icon{
@@ -216,6 +271,10 @@
 	}
 	.header--fanpage{
 		right: -145px;
+	}
+
+	.header--fanpage a{
+		flex: 0 0 130px;
 	}
 }
 
@@ -300,5 +359,11 @@
 	}
 	.main--info {
 		margin-top: 65px;
+	}
+	.header--search-mobile{
+		display: block;
+		position: absolute;
+	    top: 20px;
+	    right: 60px;
 	}
 }

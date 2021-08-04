@@ -11,7 +11,7 @@ $posts_from_slug = get_posts( $args );
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc - <?php echo get_the_title($posts_from_slug[0]); ?></title>
 	<meta property="og:image" content="<?php bloginfo('template_url');?>/assets/images/share.png" />
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/post-partials.css" />
@@ -89,6 +89,8 @@ $posts_from_slug = get_posts( $args );
 	include get_theme_file_path('/partials/footer-partials.php');
 	?>
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
+	</script>
+	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
 	</script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>

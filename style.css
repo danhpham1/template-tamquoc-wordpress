@@ -63,7 +63,7 @@ body{
 
 .sticky-right {
     position: fixed;
-    top: 185px;
+    top: 155px;
     z-index: 200;
     right: 0px;
     background: black;
@@ -117,4 +117,59 @@ body{
 
 .sticky-right-close-hide {
     transform: rotate(-180deg);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.color-text-red{
+    color: #cf2e2e;
+}
+
+.color-text-orange{
+    color: #ff6900;
+}
+
+.color-text-yellow{
+    color: #fcb900;
+}
+
+.color-text-green{
+    color: #00d084;
+}
+
+.color-text-blue{
+    color: #0693e3;
+}
+
+.color-text-blue-dark{
+    color: #0071a1;
+}
+
+.color-text-purple{
+    color: #9b51e0;
+}
+
+.custom-border-left{
+    border-left: 4px solid black;
+    padding-left: 10px;
 }

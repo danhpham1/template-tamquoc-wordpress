@@ -5,13 +5,14 @@
      * */   
     ?>
     <?php 
-    $category = get_post();
+    // $keyQuerySearch = the_search_query();
     ?>
     <!DOCTYPE html>
     <html>
     <head>
         <meta charset="utf-8">
-        <title>Tân Tam Quốc - <?php echo $category->post_title ?></title>
+        <title>Tân Tam Quốc - Tìm Kiếm</title>
+        <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/tintuc-partials.css" />
@@ -78,7 +79,7 @@
                     </a>
                 </div> -->
                 <div class="tituc-main--right">
-                    <h3><?php echo $category->post_title ?></h3>
+                    <h3>Kết quả tìm kiếm</h3>
                     <hr>
                     <div class="tintuc-items">
                         <?php
@@ -87,10 +88,9 @@
                         $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
                         $query = new WP_Query( 
                             array(
-                                'paged'         => $paged, 
-                                'category_name' => $category->post_name,
-                                'post_type'     => 'post',
-                                'post_status'   => 'publish',
+                                's'                             => get_search_query(),
+                                'post_status'                   => 'publish',
+                                'posts_per_page'                =>get_option('posts_per_page')
                             )
                         );
 
@@ -107,41 +107,6 @@
                             }
 
                             // next_posts_link() usage with max_num_pages
-                            $max_num_pages = $query->max_num_pages;
-                            if($max_num_pages > 1){ 
-                                ?>
-                                <ul class="pagination">
-                                    <li class="first"><a href="/<?php echo $category->post_name ?>/"><<</a></li>
-                                    <?php
-                                    if($paged <= 1){ ?>
-                                        <li class="pre"><a class="" href="/<?php echo $category->post_name ?>/page/1"><</a></li>
-                                        <?php
-                                    }else{ ?>
-                                        <li class="page"><a href="/<?php echo $category->post_name ?>/page/<?php echo $paged - 1 ?>"><</a></li>
-                                        <?php
-                                    }
-                                    ?>
-                                    <?php
-                                    for($i=1;$i <= $max_num_pages;$i++){
-                                        ?>
-                                        <li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/<?php echo $category->post_name ?>/page/<?php echo $i ?>"><?php echo $i ?></a></li>
-                                        <?php
-                                    }
-                                    ?>
-                                    <?php
-                                    if($paged >= $max_num_pages){ ?>
-                                        <li class="next"><a href="/<?php echo $category->post_name ?>/page/<?php echo $max_num_pages ?>">></a></li>
-                                        <?php
-                                    }else{ ?>
-                                        <li class="page"><a href="/<?php echo $category->post_name ?>/page/<?php echo $paged + 1 ?>">></a></li>
-                                        <?php
-                                    }
-                                    ?>
-                                    
-                                    <li class="last"><a href="/<?php echo $category->post_name ?>/page/<?php echo $max_num_pages ?>">>></a></li>
-                                </ul>
-                                <?php
-                            }
                             wp_reset_postdata();
                         }else{ ?>
                             <p style="
@@ -164,7 +129,8 @@
         <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
         </script>
-
+        <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
+        </script>
         <script>
           // Your web app's Firebase configuration
           // For Firebase JS SDK v7.20.0 and later, measurementId is optional

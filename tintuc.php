@@ -13,7 +13,7 @@
 		<meta charset="utf-8">
 		<title>Tân Tam Quốc - <?php echo $category->post_title ?></title>
 		<meta property="og:image" content="<?php bloginfo('template_url');?>/assets/images/share.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/tintuc-partials.css" />
@@ -430,7 +430,8 @@
 				?>
 			});
 		</script>
-
+		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
+		</script>
 		<script>
 		  // Your web app's Firebase configuration
 		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional

@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc</title>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
+	<meta property="og:image" content="<?php bloginfo('template_url');?>/assets/images/share.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/header.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/main.css" />
@@ -66,18 +67,7 @@
 	<?php 
 	include get_theme_file_path('/footer/footer.php');
 	?>
-	<!-- <form role="search" method="get" class="search-form" action="<?php echo 
-		home_url( '/' ); ?>">
-		<label>
-			<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
-			<input type="search" class="search-field"
-			placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
-			value="<?php echo get_search_query() ?>" name="s"
-			title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-		</label>
-		<input type="submit" class="search-submit"
-		value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-	</form>  -->
+	
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/tabs.js">
 	</script>
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/slide-character.js">
@@ -85,6 +75,8 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
 	</script>
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/sticky.js">
+	</script>
+	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
 	</script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>

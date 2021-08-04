@@ -212,7 +212,8 @@
 				activeTabs($('#tabs #tab-id-1'))
 			});
 		</script>
-
+		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
+		</script>
 		<script>
 		  // Your web app's Firebase configuration
 		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional

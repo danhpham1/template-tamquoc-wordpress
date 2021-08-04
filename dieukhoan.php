@@ -9,7 +9,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc - Điều Khoản Sử Dụng Dịch Vụ</title>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
+	<meta property="og:image" content="<?php bloginfo('template_url');?>/assets/images/share.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/post-partials.css" />
@@ -72,6 +73,8 @@
 		Top
 	</a>
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/scroll-top.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
+	</script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 	<script>
