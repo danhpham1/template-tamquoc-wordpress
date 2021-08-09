@@ -128,7 +128,11 @@
 .post-content--container{
 	width: 900px;
 	margin: auto;
-	padding: 20px 0px;
+	padding: 5px 0px;
+}
+
+.post-content--container p{
+	margin-bottom: 0px;
 }
 
 .post-content--container ul, .post-content--container li{
@@ -136,7 +140,10 @@
 }
 
 .post-content--title{
-	background: rgb(162, 55, 36);
+	display: block;
+    background: -webkit-linear-gradient(#b9452e, #892719);
+    background: linear-gradient(#b9452e, #892719);
+    border-top: solid 1px #d25d40;
 }
 
 .post-content--title .post-content--container p:first-child{
@@ -172,8 +179,8 @@
 	color: rgb(192, 183, 180);
 }
 
-.breadcrumb-post ul li a:hover{
-	color: white;
+.breadcrumb-post ul li:hover a{
+	color: white !important;
 }
 
 .active{

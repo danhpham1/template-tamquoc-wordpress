@@ -129,6 +129,7 @@
 	text-align: center;
 	text-transform: capitalize;
 	color: #FFC107;
+	margin-bottom: 0px;
 }
 
 .bg--text-skill div p:last-child{

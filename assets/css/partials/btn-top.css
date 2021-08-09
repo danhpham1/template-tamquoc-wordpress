@@ -8,7 +8,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: white;
+	color: white !important;
 	background: #f6a628;
 	padding: 5px 20px;
 	border-top-right-radius: 10px;
