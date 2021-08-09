@@ -35,16 +35,16 @@
 			</div>
 			<div class="sticky-right-items">
 				<div class="sticky-right-btn btn-chplay">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt="">
+					<a href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt="">
+					<a href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/qr.png" alt="">
 				</div>
 				<div class="sticky-right-btn btn-chplay">
-					<a href="#">
+					<a href="https://tamquoc.itap.vn/huong-dan-nap-va-su-dung-phieu-thanh-toan/" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/nap-the-btn.png" alt="">
 					</a>
 				</div>
@@ -54,7 +54,7 @@
 					</a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
-					<a href="#">
+					<a href="/">
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/trangchu-btn.png" alt="">
 					</a>
 				</div>

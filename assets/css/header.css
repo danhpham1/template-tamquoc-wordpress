@@ -115,7 +115,7 @@
 
 .header--fanpage a:hover{
 	text-decoration: none;
-	color: #FFC107;
+	color: #f6e29e !important;
 }
 
 .header--call{
@@ -161,6 +161,7 @@
 
 .menu-header-container ul li a:hover{
 	text-decoration: none;
+	color: #f6e29e !important;
 }
 
 
