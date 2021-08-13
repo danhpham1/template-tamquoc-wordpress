@@ -119,6 +119,12 @@
 
 .footer-news .footer-news-title p a{
 	color: white !important;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-news .footer-news-title p a:hover{
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 600;
 }
 
 .footer-news .footer-news-title span:last-child{

@@ -144,11 +144,11 @@
 
 .main--news-tabs ul{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #8A580D;
-	padding: 5px 5px 10px 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFC107;
+    padding: 10px 0px 0px 0px;
 }
 
 .main--news-tabs ul li a{
@@ -241,6 +241,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+}
+
+.main--news-items p{
+	margin-bottom: 0px !important;
+	padding: 2px 0px;
 }
 
 .main--news-items .item--title{
@@ -254,6 +260,11 @@
 	line-height: 19px;
 	letter-spacing: 0.05em;
 	color: #959387;
+	transition: color 0.3s ease-in-out;
+}
+
+.main--news-items .item--title a:hover{
+	color: black !important;
 }
 
 .main--news-items .item--date{
@@ -270,6 +281,7 @@
 
 .tabs-active{
 	border-bottom: 2px solid #FFC107;
+	z-index: 100;
 }
 
 .mySlides {display:none}
@@ -325,7 +337,7 @@
 
 .main--arrow .main--arrow-left,.main--arrow .main--arrow-right{
 	width: 280px;
-    margin-top: 50px;
+    margin-top: 95px;
 }
 
 .main--arrow .main--arrow-left{
@@ -338,6 +350,7 @@
 
 .main--arrow .main--arrow-btn-playnow{
 	margin: 0px 35px;
+	margin-top: -210px;
 }
 
 .main--arrow .main--arrow-btn-playnow img{

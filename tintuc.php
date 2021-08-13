@@ -6,13 +6,21 @@
 	?>
 	<?php 
 	$category = get_post();
+	$finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	?>
 	<!DOCTYPE html>
 	<html>
 	<head>
 		<meta charset="utf-8">
+		<meta property="og:title" content="Tân Tam Quốc - <?php echo get_the_title($category); ?>" />
+		<meta property="og:description" content="Tân Tam Quốc - iTap | Game chiến thuật Tam Quốc tuyệt đỉnh | <?php echo get_the_title($category); ?>" />
+		<meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/share.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="vi_VN" />
+		<meta property="og:url" content="https://<?php echo $finalurl; ?>" />
+		<meta property="fb:app_id" content="161336279279875" />
+		<meta name="robots" content="noindex" />
 		<title>Tân Tam Quốc - <?php echo $category->post_title ?></title>
-		<meta property="og:image" content="<?php bloginfo('template_url');?>/assets/images/share.png" />
 		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
@@ -132,307 +140,307 @@
 										<?php
 									}else{ ?>
 										<li class="page"><a href="/<tin-tuc/page/<?php echo $paged + 1 ?>">></a></li>
-										<?php
-									}
-									?>
-									
-									<li class="last"><a href="/tin-tuc/page/<?php echo $max_num_pages ?>">>></a></li>
-								</ul>
+											<?php
+										}
+										?>
+
+										<li class="last"><a href="/tin-tuc/page/<?php echo $max_num_pages ?>">>></a></li>
+									</ul>
+									<?php
+								}
+								wp_reset_postdata();
+							}else{ ?>
+								<p style="
+								padding: 10px;
+								text-align: center;
+								font-size: 20px;
+								font-weight: bold;
+								">Không có bài viết nào</p>
 								<?php
 							}
-							wp_reset_postdata();
-						}else{ ?>
-							<p style="
-							padding: 10px;
-							text-align: center;
-							font-size: 20px;
-							font-weight: bold;
-							">Không có bài viết nào</p>
-							<?php
-						}
-						?>
+							?>
+						</div>
 					</div>
-				</div>
-				<div id="tabs-2" class="tituc-main--right">
-					<div class="tintuc-items">
-						<?php
-						$current_page = get_queried_object();
+					<div id="tabs-2" class="tituc-main--right">
+						<div class="tintuc-items">
+							<?php
+							$current_page = get_queried_object();
 
-						$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-						$query = new WP_Query( 
-							array(
-								'paged'         => $paged, 
-								'category_name' => 'su-kien',
-								'post_type'     => 'post',
-								'post_status'   => 'publish',
-							)
-						);
+							$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+							$query = new WP_Query( 
+								array(
+									'paged'         => $paged, 
+									'category_name' => 'su-kien',
+									'post_type'     => 'post',
+									'post_status'   => 'publish',
+								)
+							);
 
-						if ($query->have_posts()) {
-							while ($query->have_posts()) { 
-								$query->the_post(); ?>
-								<p class="tintuc-item-title">Sư kiện</p>
-								<div class="tintuc-item">
-									<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-									<p><?php echo get_the_date(); ?></p>
-								</div>
+							if ($query->have_posts()) {
+								while ($query->have_posts()) { 
+									$query->the_post(); ?>
+									<p class="tintuc-item-title">Sư kiện</p>
+									<div class="tintuc-item">
+										<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+										<p><?php echo get_the_date(); ?></p>
+									</div>
 
-								<?php
-							}
+									<?php
+								}
 
             				// next_posts_link() usage with max_num_pages
-							$max_num_pages = $query->max_num_pages;
-							if($max_num_pages > 1){ 
-								?>
-								<ul class="pagination">
-									<li class="first"><a href="/su-kien/"><<</a></li>
-									<?php
-									if($paged <= 1){ ?>
-										<li class="pre"><a class="" href="/su-kien/page/1"><</a></li>
-										<?php
-									}else{ ?>
-										<li class="page"><a href="/su-kien/page/<?php echo $paged - 1 ?>"><</a></li>
-										<?php
-									}
+								$max_num_pages = $query->max_num_pages;
+								if($max_num_pages > 1){ 
 									?>
-									<?php
-									for($i=1;$i <= $max_num_pages;$i++){
+									<ul class="pagination">
+										<li class="first"><a href="/su-kien/"><<</a></li>
+										<?php
+										if($paged <= 1){ ?>
+											<li class="pre"><a class="" href="/su-kien/page/1"><</a></li>
+											<?php
+										}else{ ?>
+											<li class="page"><a href="/su-kien/page/<?php echo $paged - 1 ?>"><</a></li>
+											<?php
+										}
 										?>
-										<li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/su-kien/page/<?php echo $i ?>"><?php echo $i ?></a></li>
 										<?php
-									}
-									?>
+										for($i=1;$i <= $max_num_pages;$i++){
+											?>
+											<li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/su-kien/page/<?php echo $i ?>"><?php echo $i ?></a></li>
+											<?php
+										}
+										?>
+										<?php
+										if($paged >= $max_num_pages){ ?>
+											<li class="next"><a href="/su-kien/page/<?php echo $max_num_pages ?>">></a></li>
+											<?php
+										}else{ ?>
+											<li class="page"><a href="/su-kien/page/<?php echo $paged + 1 ?>">></a></li>
+											<?php
+										}
+										?>
+
+										<li class="last"><a href="/su-kien/page/<?php echo $max_num_pages ?>">>></a></li>
+									</ul>
 									<?php
-									if($paged >= $max_num_pages){ ?>
-										<li class="next"><a href="/su-kien/page/<?php echo $max_num_pages ?>">></a></li>
-										<?php
-									}else{ ?>
-										<li class="page"><a href="/su-kien/page/<?php echo $paged + 1 ?>">></a></li>
-										<?php
-									}
-									?>
-									
-									<li class="last"><a href="/su-kien/page/<?php echo $max_num_pages ?>">>></a></li>
-								</ul>
+								}
+								wp_reset_postdata();
+							}else{ ?>
+								<p style="
+								padding: 10px;
+								text-align: center;
+								font-size: 20px;
+								font-weight: bold;
+								">Không có bài viết nào</p>
 								<?php
 							}
-							wp_reset_postdata();
-						}else{ ?>
-							<p style="
-							padding: 10px;
-							text-align: center;
-							font-size: 20px;
-							font-weight: bold;
-							">Không có bài viết nào</p>
-							<?php
-						}
-						?>
+							?>
+						</div>
 					</div>
-				</div>
-				<div id="tabs-3" class="tituc-main--right">
-					<div class="tintuc-items">
-						<?php
-						$current_page = get_queried_object();
+					<div id="tabs-3" class="tituc-main--right">
+						<div class="tintuc-items">
+							<?php
+							$current_page = get_queried_object();
 
-						$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-						$query = new WP_Query( 
-							array(
-								'paged'         => $paged, 
-								'category_name' => 'huong-dan',
-								'post_type'     => 'post',
-								'post_status'   => 'publish',
-							)
-						);
+							$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+							$query = new WP_Query( 
+								array(
+									'paged'         => $paged, 
+									'category_name' => 'huong-dan',
+									'post_type'     => 'post',
+									'post_status'   => 'publish',
+								)
+							);
 
-						if ($query->have_posts()) {
-							while ($query->have_posts()) { 
-								$query->the_post(); ?>
-								<p class="tintuc-item-title">Hướng dẫn</p>
-								<div class="tintuc-item">
-									<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-									<p><?php echo get_the_date(); ?></p>
-								</div>
+							if ($query->have_posts()) {
+								while ($query->have_posts()) { 
+									$query->the_post(); ?>
+									<p class="tintuc-item-title">Hướng dẫn</p>
+									<div class="tintuc-item">
+										<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+										<p><?php echo get_the_date(); ?></p>
+									</div>
 
-								<?php
-							}
+									<?php
+								}
 
             				// next_posts_link() usage with max_num_pages
-							$max_num_pages = $query->max_num_pages;
-							if($max_num_pages > 1){ 
-								?>
-								<ul class="pagination">
-									<li class="first"><a href="/huong-dan/"><<</a></li>
-									<?php
-									if($paged <= 1){ ?>
-										<li class="pre"><a class="" href="/huong-dan/page/1"><</a></li>
-										<?php
-									}else{ ?>
-										<li class="page"><a href="/huong-dan/page/<?php echo $paged - 1 ?>"><</a></li>
-										<?php
-									}
+								$max_num_pages = $query->max_num_pages;
+								if($max_num_pages > 1){ 
 									?>
-									<?php
-									for($i=1;$i <= $max_num_pages;$i++){
+									<ul class="pagination">
+										<li class="first"><a href="/huong-dan/"><<</a></li>
+										<?php
+										if($paged <= 1){ ?>
+											<li class="pre"><a class="" href="/huong-dan/page/1"><</a></li>
+											<?php
+										}else{ ?>
+											<li class="page"><a href="/huong-dan/page/<?php echo $paged - 1 ?>"><</a></li>
+											<?php
+										}
 										?>
-										<li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/huong-dan/page/<?php echo $i ?>"><?php echo $i ?></a></li>
 										<?php
-									}
-									?>
+										for($i=1;$i <= $max_num_pages;$i++){
+											?>
+											<li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/huong-dan/page/<?php echo $i ?>"><?php echo $i ?></a></li>
+											<?php
+										}
+										?>
+										<?php
+										if($paged >= $max_num_pages){ ?>
+											<li class="next"><a href="/huong-dan/page/<?php echo $max_num_pages ?>">></a></li>
+											<?php
+										}else{ ?>
+											<li class="page"><a href="/huong-dan/page/<?php echo $paged + 1 ?>">></a></li>
+											<?php
+										}
+										?>
+
+										<li class="last"><a href="/huong-dan/page/<?php echo $max_num_pages ?>">>></a></li>
+									</ul>
 									<?php
-									if($paged >= $max_num_pages){ ?>
-										<li class="next"><a href="/huong-dan/page/<?php echo $max_num_pages ?>">></a></li>
-										<?php
-									}else{ ?>
-										<li class="page"><a href="/huong-dan/page/<?php echo $paged + 1 ?>">></a></li>
-										<?php
-									}
-									?>
-									
-									<li class="last"><a href="/huong-dan/page/<?php echo $max_num_pages ?>">>></a></li>
-								</ul>
+								}
+								wp_reset_postdata();
+							}else{ ?>
+								<p style="
+								padding: 10px;
+								text-align: center;
+								font-size: 20px;
+								font-weight: bold;
+								">Không có bài viết nào</p>
 								<?php
 							}
-							wp_reset_postdata();
-						}else{ ?>
-							<p style="
-							padding: 10px;
-							text-align: center;
-							font-size: 20px;
-							font-weight: bold;
-							">Không có bài viết nào</p>
-							<?php
-						}
-						?>
+							?>
+						</div>
 					</div>
-				</div>
-				<div id="tabs-4" class="tituc-main--right">
-					<div class="tintuc-items">
-						<?php
-						$current_page = get_queried_object();
+					<div id="tabs-4" class="tituc-main--right">
+						<div class="tintuc-items">
+							<?php
+							$current_page = get_queried_object();
 
-						$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-						$query = new WP_Query( 
-							array(
-								'paged'         => $paged, 
-								'category_name' => 'cam-nang',
-								'post_type'     => 'post',
-								'post_status'   => 'publish',
-							)
-						);
+							$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+							$query = new WP_Query( 
+								array(
+									'paged'         => $paged, 
+									'category_name' => 'cam-nang',
+									'post_type'     => 'post',
+									'post_status'   => 'publish',
+								)
+							);
 
-						if ($query->have_posts()) {
-							while ($query->have_posts()) { 
-								$query->the_post(); ?>
-								<p class="tintuc-item-title">Cẩm nang</p>
-								<div class="tintuc-item">
-									<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-									<p><?php echo get_the_date(); ?></p>
-								</div>
+							if ($query->have_posts()) {
+								while ($query->have_posts()) { 
+									$query->the_post(); ?>
+									<p class="tintuc-item-title">Cẩm nang</p>
+									<div class="tintuc-item">
+										<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+										<p><?php echo get_the_date(); ?></p>
+									</div>
 
-								<?php
-							}
+									<?php
+								}
 
             				// next_posts_link() usage with max_num_pages
-							$max_num_pages = $query->max_num_pages;
-							if($max_num_pages > 1){ 
-								?>
-								<ul class="pagination">
-									<li class="first"><a href="/cam-nang/"><<</a></li>
-									<?php
-									if($paged <= 1){ ?>
-										<li class="pre"><a class="" href="/cam-nang/page/1"><</a></li>
-										<?php
-									}else{ ?>
-										<li class="page"><a href="/cam-nang/page/<?php echo $paged - 1 ?>"><</a></li>
-										<?php
-									}
+								$max_num_pages = $query->max_num_pages;
+								if($max_num_pages > 1){ 
 									?>
-									<?php
-									for($i=1;$i <= $max_num_pages;$i++){
+									<ul class="pagination">
+										<li class="first"><a href="/cam-nang/"><<</a></li>
+										<?php
+										if($paged <= 1){ ?>
+											<li class="pre"><a class="" href="/cam-nang/page/1"><</a></li>
+											<?php
+										}else{ ?>
+											<li class="page"><a href="/cam-nang/page/<?php echo $paged - 1 ?>"><</a></li>
+											<?php
+										}
 										?>
-										<li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/cam-nang/page/<?php echo $i ?>"><?php echo $i ?></a></li>
 										<?php
-									}
-									?>
+										for($i=1;$i <= $max_num_pages;$i++){
+											?>
+											<li class="page <?php if($paged == $i) { echo "active"; } ?>"><a class="<?php if($paged == $i) { echo "active-text"; } ?>" href="/cam-nang/page/<?php echo $i ?>"><?php echo $i ?></a></li>
+											<?php
+										}
+										?>
+										<?php
+										if($paged >= $max_num_pages){ ?>
+											<li class="next"><a href="/cam-nang/page/<?php echo $max_num_pages ?>">></a></li>
+											<?php
+										}else{ ?>
+											<li class="page"><a href="/cam-nang/page/<?php echo $paged + 1 ?>">></a></li>
+											<?php
+										}
+										?>
+
+										<li class="last"><a href="/cam-nang/page/<?php echo $max_num_pages ?>">>></a></li>
+									</ul>
 									<?php
-									if($paged >= $max_num_pages){ ?>
-										<li class="next"><a href="/cam-nang/page/<?php echo $max_num_pages ?>">></a></li>
-										<?php
-									}else{ ?>
-										<li class="page"><a href="/cam-nang/page/<?php echo $paged + 1 ?>">></a></li>
-										<?php
-									}
-									?>
-									
-									<li class="last"><a href="/cam-nang/page/<?php echo $max_num_pages ?>">>></a></li>
-								</ul>
+								}
+								wp_reset_postdata();
+							}else{ ?>
+								<p style="
+								padding: 10px;
+								text-align: center;
+								font-size: 20px;
+								font-weight: bold;
+								">Không có bài viết nào</p>
 								<?php
 							}
-							wp_reset_postdata();
-						}else{ ?>
-							<p style="
-							padding: 10px;
-							text-align: center;
-							font-size: 20px;
-							font-weight: bold;
-							">Không có bài viết nào</p>
-							<?php
-						}
-						?>
+							?>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<?php 
-		include get_theme_file_path('/partials/footer-partials.php');
-		?>
-		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
-		</script>
-		<script type="text/javascript">
-			$(document).ready(function()
-			{
-				function activeTabs(obj){
-					if(obj){
-						var id = $(obj).find('a').attr('href');
-						$('#tabs li').removeClass('tabs-active');
-						$('#tabs li a').removeClass('tabs-a-active');
-						$($(obj).find('a')[0]).addClass('tabs-a-active');
-						$(obj).addClass('tabs-active');
-						$('.tituc-main--right').hide();
-						$(id).show();
+			<?php 
+			include get_theme_file_path('/partials/footer-partials.php');
+			?>
+			<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+			<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function()
+				{
+					function activeTabs(obj){
+						if(obj){
+							var id = $(obj).find('a').attr('href');
+							$('#tabs li').removeClass('tabs-active');
+							$('#tabs li a').removeClass('tabs-a-active');
+							$($(obj).find('a')[0]).addClass('tabs-a-active');
+							$(obj).addClass('tabs-active');
+							$('.tituc-main--right').hide();
+							$(id).show();
+						}
 					}
-				}
 
-				$('#tabs li').click(function(){
-					activeTabs(this);
-					return false;
-				})
-				<?php 
+					$('#tabs li').click(function(){
+						activeTabs(this);
+						return false;
+					})
+					<?php 
 					switch($category->post_name){
 						case 'tin-tuc':
-							echo "activeTabs($('#tabs #tab-id-1'))";
-							break;
+						echo "activeTabs($('#tabs #tab-id-1'))";
+						break;
 						case 'su-kien':
-							echo "activeTabs($('#tabs #tab-id-2'))";
-							break;
+						echo "activeTabs($('#tabs #tab-id-2'))";
+						break;
 						case 'huong-dan':
-							echo "activeTabs($('#tabs #tab-id-3'))";
-							break;
+						echo "activeTabs($('#tabs #tab-id-3'))";
+						break;
 						case 'cam-nang':
-							echo "activeTabs($('#tabs #tab-id-4'))";
-							break;
+						echo "activeTabs($('#tabs #tab-id-4'))";
+						break;
 						default:
-							echo "activeTabs($('#tabs #tab-id-1'))";
-							break;
+						echo "activeTabs($('#tabs #tab-id-1'))";
+						break;
 					}
-				?>
-			});
-		</script>
-		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
-		</script>
-		<script>
+					?>
+				});
+			</script>
+			<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
+			</script>
+			<script>
 		  // Your web app's Firebase configuration
 		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 		  var firebaseConfig = {

@@ -4,7 +4,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc</title>
-	<meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/share.png" />
+	<meta property="og:title" content="Tân Tam Quốc" />
+    <meta property="og:description" content="Tân Tam Quốc - iTap | Game chiến thuật Tam Quốc tuyệt đỉnh | Trang Chủ" />
+	<meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/share.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:url" content="https://tamquoc.itap.vn" />
+    <meta property="fb:app_id" content="161336279279875" />
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/images/logo-game.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/header.css" />

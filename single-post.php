@@ -4,14 +4,35 @@ $args = array(
 	'name' => $post->post_name
 );
 $posts_from_slug = get_posts($args);
+$finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 ?>
 <!DOCTYPE html>
-<html>
+<html style="margin-top:0px !important">
 
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc - <?php echo get_the_title($posts_from_slug[0]); ?></title>
-	<meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/share.png" />
+	<meta property="og:title" content="Tân Tam Quốc" />
+	<meta property="og:description" content="<?php
+		if(has_excerpt($posts_from_slug[0]->ID)){
+			echo get_the_excerpt($posts_from_slug[0]->ID);
+		}else{
+			echo "Tân Tam Quốc - iTap |" . get_the_title($posts_from_slug[0]); 
+		}
+	?>
+	" />
+	<meta property="og:image" content="<?php 
+		if (has_post_thumbnail( $posts_from_slug[0]->ID ) ){
+			echo get_the_post_thumbnail_url($posts_from_slug[0]->ID);
+		}else{
+			echo bloginfo('template_url') . "/assets/images/share.jpg";
+		}
+	?>" />
+	<meta property="og:type" content="article" />
+	<meta property="og:locale" content="vi_VN" />
+	<meta property="og:url" content="https://<?php echo $finalurl ?>" />
+	<meta property="fb:app_id" content="161336279279875" />
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/images/logo-game.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/header-partials.css" />
