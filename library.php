@@ -16,7 +16,7 @@
 		<meta property="og:locale" content="vi_VN" />
 		<meta property="og:url" content="https://tamquoc.itap.vn/thu-vien/" />
 		<meta property="fb:app_id" content="161336279279875" />
-		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/assets/images/logo-game.png" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/header-partials.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/tintuc-partials.css" />
@@ -74,77 +74,44 @@
 			<div class="tituc-main--container">
 				<div class="tabs" id="tabs">
 					<ul>
-						<li id="tab-id-1"><a href="#tabs-1">Tổng hợp</a></li>
 						<li id="tab-id-2"><a href="#tabs-2">Hình Ảnh</a></li>
 						<li id="tab-id-3"><a href="#tabs-3">Video Clips</a></li>
 					</ul>
 				</div>
-				<div id="tabs-1" class="tituc-main--right">
+<!-- 				<div id="tabs-1" class="tituc-main--right">
 					<ul class="list-img">
 						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
+							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
 								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
+									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png" />
 									<span class="post-mask"></span>
 								</span>
 							</a>
 						</li>
 						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
+							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png">
 								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
+									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png" />
 									<span class="post-mask"></span>
 								</span>
 							</a>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 				<div id="tabs-2" class="tituc-main--right">
 					<ul class="list-img">
 						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
+							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
 								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
+									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png" />
 									<span class="post-mask"></span>
 								</span>
 							</a>
 						</li>
 						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
+							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png">
 								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
+									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png" />
 									<span class="post-mask"></span>
 								</span>
 							</a>
@@ -154,35 +121,8 @@
 				<div id="tabs-3" class="tituc-main--right">
 					<ul class="list-img">
 						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/test.png">
-								<span class="post-img">
-									<img src="<?php bloginfo('template_url');?>/assets/images/test.png" />
-									<span class="post-mask"></span>
-								</span>
+							<a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=6KQjIZd9gVA">
+								<img src="<?php bloginfo('template_url');?>/assets/images/img-video-1.png" width="240" height="180" />
 							</a>
 						</li>
 					</ul>
@@ -215,7 +155,7 @@
 					activeTabs(this);
 					return false;
 				})
-				activeTabs($('#tabs #tab-id-1'))
+				activeTabs($('#tabs #tab-id-2'))
 			});
 		</script>
 		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">

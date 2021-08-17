@@ -152,12 +152,13 @@
 }
 
 .main--news-tabs ul li a{
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 	text-align: center;
 	letter-spacing: 0.05em;
 	text-transform: capitalize;
 	color: #D6B78A;
+	font-weight: 500;
 }
 
 

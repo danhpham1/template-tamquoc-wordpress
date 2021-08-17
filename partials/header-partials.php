@@ -18,9 +18,9 @@
             ); ?> 
             <img class="logo" src="<?php bloginfo('template_url');?>/assets/images/logo.png">
             <div class="header--fanpage">
-              <a  href="#">GIỚI THIỆU</a>
-              <a  href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">CỘNG ĐỒNG</a>
-              <a class="fix-flex"  href="/tamquoc/thu-vien">THƯ VIỆN</a>
+              <a  href="https://tamquoc.itap.vn/tan-tam-quoc-cong-thanh-xung-de-nhat-thong-giang-son/">Giới Thiệu</a>
+              <a  href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">Cộng Đồng</a>
+              <a class="fix-flex"  href="/tamquoc/thu-vien">Thư Viện</a>
               <form role="search" method="get" class="search-form" id="search-form" action="<?php echo 
                 home_url( '/' ); ?>">
                 <label  id="search-field">
@@ -43,7 +43,7 @@
             <a  href="/tin-tuc">TIN TỨC</a>
             <a  href="/su-kien">SỰ KIỆN</a>
             <a  href="/huong-dan">HƯỚNG DẪN</a>
-            <a  href="#">GIỚI THIỆU</a>
+            <a  href="https://tamquoc.itap.vn/tan-tam-quoc-cong-thanh-xung-de-nhat-thong-giang-son/">GIỚI THIỆU</a>
             <a  href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">CỘNG ĐỒNG</a>
             <a  href="/tamquoc/thu-vien">THƯ VIỆN</a>
             <i class="fas fa-times" onclick="closeBar()"></i>
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="top-video">
-      <a data-fancybox href="https://www.youtube.com/watch?v=m-PJmmvyP10">
+      <a data-fancybox href="https://www.youtube.com/watch?v=6KQjIZd9gVA">
         <img src="<?php bloginfo('template_url');?>/assets/images/play.png" alt="">
       </a>
     </div>

@@ -60,8 +60,8 @@
 					</a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
-					<a href="/">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/trangchu-btn.png" alt="">
+					<a href="https://www.facebook.com/groups/ttq.itap" target="_blank">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/group.png" alt="">
 					</a>
 				</div>
 			</div>

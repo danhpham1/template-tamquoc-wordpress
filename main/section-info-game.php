@@ -28,13 +28,13 @@
 			<div class="main-news-container">
 				<div class="main--news-right">
 					<div class="w3-content w3-display-container">
-						<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
-						<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
-						<img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
+						<a href="https://tamquoc.itap.vn/huong-dan-nap-va-su-dung-phieu-thanh-toan/"><img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png"></a>
+						<a href="https://tamquoc.itap.vn/huong-dan-nhap-code/"><img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png"></a>
+						<!-- <img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png"> -->
 						<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
 							<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
 							<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-							<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+							<!-- <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
 						</div>
 					</div>
 				</div>
