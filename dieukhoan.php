@@ -5,7 +5,7 @@
 	 * */	
 	?>
 	<!DOCTYPE html>
-	<html>
+	<html style="margin-top: 0px !important;">
 	<head>
 		<meta charset="utf-8">
 		<title>Tân Tam Quốc - Điều Khoản Sử Dụng Dịch Vụ</title>
@@ -24,6 +24,12 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/dieu-khoan.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/btn-top.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<?php wp_head(); ?>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
 	<body style="margin: 0;">
 		<div class="top">
@@ -35,17 +41,21 @@
 					<div class="main--info">
 						<div class="main--info-left">
 							<div>
-								<img src="<?php bloginfo('template_url');?>/assets/images/logo-game.png">
+								<img src="<?php bloginfo('template_url'); ?>/assets/images/logo-game.png">
 							</div>
 							<div>
-								<h3 style="margin:0">Tân Tam Quốc</h3>
+								<h3>Tân Tam Quốc</h3>
 								<p>Nhà phát hành iTap</p>
 							</div>
 						</div>
 						<div class="main--info-right">
-							<img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img>
-							<img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img>
-							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr.png"></img>
+							<div class="main--info-right-left">
+								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
+								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
+							</div>
+							<img class="qr" src="<?php bloginfo('template_url'); ?>/assets/images/qr.png"></img>
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/nap-the.png">
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/giftcode.png">
 						</div>
 					</div>
 				</div>
@@ -78,6 +88,27 @@
 		<i class="fa fa-angle-up"></i>
 		Top
 	</a>
+	<!-- notification link -->
+	<div class="modal fade" id="notification-link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="swal-icon swal-icon--warning">
+						<span class="swal-icon--warning__body">
+							<span class="swal-icon--warning__dot"></span>
+						</span>
+					</div>
+					<p class="font-weight-bold text-center">
+						Đang Cập Nhật, Vui Lòng Quay Lại Sau.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/scroll-top.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/handle-submit-search.js">
 	</script>
@@ -98,6 +129,9 @@
 	  // Initialize Firebase
 	  firebase.initializeApp(firebaseConfig);
 	  firebase.analytics();
+	  function showModal(modal){
+	  	$(modal).modal();
+	  }
 	</script>
 </body>
 </html>

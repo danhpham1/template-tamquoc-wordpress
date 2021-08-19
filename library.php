@@ -5,7 +5,7 @@
 	 * */	
 	?>
 	<!DOCTYPE html>
-	<html>
+	<html style="margin-top: 0px !important;">
 	<head>
 		<meta charset="utf-8">
 		<title>Tân Tam Quốc - Thư Viện</title>
@@ -59,8 +59,8 @@
 						</div>
 						<div class="main--info-right">
 							<div class="main--info-right-left">
-								<img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img>
-								<img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img>
+								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
+								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
 							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr.png"></img>
 							<img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png">
@@ -132,6 +132,27 @@
 		<?php 
 		include get_theme_file_path('/partials/footer-partials.php');
 		?>
+		<!-- notification link -->
+        <div class="modal fade" id="notification-link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="swal-icon swal-icon--warning">
+                            <span class="swal-icon--warning__body">
+                                <span class="swal-icon--warning__dot"></span>
+                            </span>
+                        </div>
+                        <p class="font-weight-bold text-center">
+                            Đang Cập Nhật, Vui Lòng Quay Lại Sau.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
 		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
@@ -175,6 +196,9 @@
 		  // Initialize Firebase
 		  firebase.initializeApp(firebaseConfig);
 		  firebase.analytics();
+		  function showModal(modal){
+            $(modal).modal();
+          }
 		</script>
 	</body>
 	</html>

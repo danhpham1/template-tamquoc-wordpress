@@ -159,6 +159,7 @@
 
 .breadcrumb-post{
 	margin: 5px 0px;
+	font-size: 20px;
 }
 
 .breadcrumb-post ul, .breadcrumb-post li{
@@ -177,6 +178,7 @@
 
 .breadcrumb-post ul li a{
 	color: rgb(192, 183, 180);
+	text-transform: capitalize;
 }
 
 .breadcrumb-post ul li:hover a{
@@ -185,4 +187,10 @@
 
 .active{
 	color: white !important;
+}
+
+@media screen and (max-width: 1023px){
+	.post-content--container.post-content--responsive{
+		font-size: 25px;
+	}
 }

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html style="margin-top: 0px !important;">
 
 <head>
 	<meta charset="utf-8">
 	<title>Tân Tam Quốc</title>
 	<meta property="og:title" content="Tân Tam Quốc" />
-    <meta property="og:description" content="Tân Tam Quốc - iTap | Game chiến thuật Tam Quốc tuyệt đỉnh | Trang Chủ" />
+	<meta property="og:description" content="Tân Tam Quốc - iTap | Game chiến thuật Tam Quốc tuyệt đỉnh | Trang Chủ" />
 	<meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/share.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="vi_VN" />
-    <meta property="og:url" content="https://tamquoc.itap.vn" />
-    <meta property="fb:app_id" content="161336279279875" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="vi_VN" />
+	<meta property="og:url" content="https://tamquoc.itap.vn" />
+	<meta property="fb:app_id" content="161336279279875" />
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/images/logo-game.png" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/header.css" />
@@ -40,11 +40,17 @@
 				<img src="<?php bloginfo('template_url'); ?>/assets/images/sticky-errow.png" alt="">
 			</div>
 			<div class="sticky-right-items">
-				<div class="sticky-right-btn btn-chplay">
+				<!-- <div class="sticky-right-btn btn-chplay">
 					<a href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
 					<a href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
+				</div> -->
+				<div class="sticky-right-btn btn-chplay">
+					<a onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt=""></a>
+				</div>
+				<div class="sticky-right-btn btn-chplay">
+					<a onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/qr.png" alt="">
@@ -77,6 +83,28 @@
 	include get_theme_file_path('/footer/footer.php');
 	?>
 
+	<!-- notification link -->
+	<div class="modal fade" id="notification-link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="swal-icon swal-icon--warning">
+						<span class="swal-icon--warning__body">
+							<span class="swal-icon--warning__dot"></span>
+						</span>
+					</div>
+					<p class="font-weight-bold text-center">
+						Đang Cập Nhật, Vui Lòng Quay Lại Sau.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
+
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/tabs.js">
 	</script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/slide-character.js">
@@ -104,6 +132,9 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 		firebase.analytics();
+		function showModal(modal){
+			$(modal).modal();
+		}
 	</script>
 </body>
 

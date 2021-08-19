@@ -14,7 +14,7 @@
 					</div>
 					<div class="footer-news">
 						<div class="footer-news-video"> 
-					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/EMRyKEJGflU" allowfullscreen></iframe>
 						</div>
 						<div class="footer-news-title"> 
 					  		<p><a href="https://tamquoc.itap.vn/chieu-mo-danh-tuong/">CHIÊU MỘ DANH TƯỚNG</a></p>
@@ -31,7 +31,7 @@
 					</div>
 					<div class="footer-news">
 						<div class="footer-news-video"> 
-					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/W0IBrpaKGEc" allowfullscreen></iframe>
 						</div>
 						<div class="footer-news-title"> 
 					  		<p><a href="https://tamquoc.itap.vn/chien-dich-lich-su/">CHIẾN DỊCH LỊCH SỬ</a></p>
@@ -50,7 +50,7 @@
 					</div>
 					<div class="footer-news">
 						<div class="footer-news-video"> 
-					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/49kgbPycBNU" allowfullscreen></iframe>
 						</div>
 						<div class="footer-news-title"> 
 					  		<p><a href="https://tamquoc.itap.vn/tuong-duong-chien/">TƯƠNG DƯƠNG CHIẾN</a></p>
@@ -67,7 +67,7 @@
 					</div>
 					<div class="footer-news">
 						<div class="footer-news-video"> 
-					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+					  		<iframe class="responsive-iframe" src="https://www.youtube.com/embed/2n0uxhkMamM" allowfullscreen></iframe>
 						</div>
 						<div class="footer-news-title"> 
 					  		<p><a href="https://tamquoc.itap.vn/huyet-chien-quan-hung/">CHIẾN QUẦN HÙNG</a></p>
@@ -94,6 +94,7 @@
 		</div>
 		<div class="footer-bottom-bottom">
 			<p>Địa chỉ: 2 - 4 - 6 Đồng Khởi, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh</p>
+			<p>Giấy phép cung cấp dịch vụ trò chơi điện tử G1 trên mạng số 1030/QĐ-BTTTT do Bộ Thông tin và Truyền thông cấp ngày 20/07/2021</p>
 		</div>
 	</div>
 </div>

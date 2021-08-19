@@ -15,52 +15,52 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	<title>Tân Tam Quốc - <?php echo get_the_title($posts_from_slug[0]); ?></title>
 	<meta property="og:title" content="Tân Tam Quốc" />
 	<meta property="og:description" content="<?php
-		if(has_excerpt($posts_from_slug[0]->ID)){
-			echo get_the_excerpt($posts_from_slug[0]->ID);
+	if(has_excerpt($posts_from_slug[0]->ID)){
+		echo get_the_excerpt($posts_from_slug[0]->ID);
 		}else{
 			echo "Tân Tam Quốc - iTap |" . get_the_title($posts_from_slug[0]); 
 		}
-	?>
-	" />
-	<meta property="og:image" content="<?php 
+		?>
+		" />
+		<meta property="og:image" content="<?php 
 		if (has_post_thumbnail( $posts_from_slug[0]->ID ) ){
 			echo get_the_post_thumbnail_url($posts_from_slug[0]->ID);
-		}else{
-			echo bloginfo('template_url') . "/assets/images/share.jpg";
-		}
-	?>" />
-	<meta property="og:type" content="article" />
-	<meta property="og:locale" content="vi_VN" />
-	<meta property="og:url" content="https://<?php echo $finalurl ?>" />
-	<meta property="fb:app_id" content="161336279279875" />
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/images/logo-game.png" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/header-partials.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/post-partials.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/footer-partials.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/btn-top.css" />
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link href="https://fonts.cdnfonts.com/css/cafeta" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<?php wp_head(); ?>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-</head>
+			}else{
+				echo bloginfo('template_url') . "/assets/images/share.jpg";
+			}
+		?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:locale" content="vi_VN" />
+		<meta property="og:url" content="https://<?php echo $finalurl ?>" />
+		<meta property="fb:app_id" content="161336279279875" />
+		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/images/logo-game.png" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/header-partials.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/post-partials.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/css/partials/footer-partials.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url');?>/assets/css/partials/btn-top.css" />
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link href="https://fonts.cdnfonts.com/css/cafeta" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<?php wp_head(); ?>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+		<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
 
-<body style="margin: 0;">
-	<div class="top">
-		<?php
-		include get_theme_file_path('/partials/header-partials.php');
-		?>
-		<div class="main">
-			<div class="main--container">
+	<body style="margin: 0;">
+		<div class="top">
+			<?php
+			include get_theme_file_path('/partials/header-partials.php');
+			?>
+			<div class="main">
+				<div class="main--container">
 				<!-- <div class="main--arrow">
 						<img class="main--arrow-left" src="<?php bloginfo('template_url'); ?>/assets/images/main-arrow-left.png">
 						<a class="main--arrow-btn-playnow" href="#"><img src="<?php bloginfo('template_url'); ?>/assets/images/choi-ngay.png"></a>
@@ -78,8 +78,8 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 						</div>
 						<div class="main--info-right">
 							<div class="main--info-right-left">
-								<img class="google-play" src="<?php bloginfo('template_url'); ?>/assets/images/google-play.png"></img>
-								<img class="apple-store" src="<?php bloginfo('template_url'); ?>/assets/images/app-store.png"></img>
+								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
+								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
 							<img class="qr" src="<?php bloginfo('template_url'); ?>/assets/images/qr.png"></img>
 							<img src="<?php bloginfo('template_url'); ?>/assets/images/nap-the.png">
@@ -106,7 +106,7 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 				</div>
 			</div>
 		</div>
-		<div class="post-content--container">
+		<div class="post-content--container post-content--responsive">
 			<?php echo $posts_from_slug[0]->post_content; ?>
 		</div>
 	</div>
@@ -117,6 +117,27 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		<i class="fa fa-angle-up"></i>
 		Top
 	</a>
+	<!-- notification link -->
+	<div class="modal fade" id="notification-link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="swal-icon swal-icon--warning">
+						<span class="swal-icon--warning__body">
+							<span class="swal-icon--warning__dot"></span>
+						</span>
+					</div>
+					<p class="font-weight-bold text-center">
+						Đang Cập Nhật, Vui Lòng Quay Lại Sau.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/toggle-bar.js">
 	</script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/handle-submit-search.js">
@@ -153,6 +174,9 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 			top: 0,
 			behavior: 'smooth',
 		}));
+		function showModal(modal){
+		  	$(modal).modal();
+		}
 	</script>
 </body>
 
