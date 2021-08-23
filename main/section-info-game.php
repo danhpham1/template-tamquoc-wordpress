@@ -2,7 +2,8 @@
 	<div class="main--container">
 		<div class="main--arrow">
 			<img class="main--arrow-left" src="<?php bloginfo('template_url');?>/assets/images/main-arrow-left.png">
-			<a class="main--arrow-btn-playnow" href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a>
+			<!-- <a class="main--arrow-btn-playnow" href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a> -->
+			<a class="main--arrow-btn-playnow" onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a>
 			<img class="main--arrow-right" src="<?php bloginfo('template_url');?>/assets/images/main-arrow-right.png">
 		</div>
 		<div class="main--info">
@@ -22,7 +23,7 @@
 					<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
 					<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 				</div>
-				<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr.png"></img>
+				<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
 				<a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
 				<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a>
 			</div>

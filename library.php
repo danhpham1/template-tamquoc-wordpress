@@ -62,7 +62,7 @@
 								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
 								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
-							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr.png"></img>
+							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
 							<img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png">
 							<img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png">
 						</div>
@@ -123,6 +123,26 @@
 						<li>
 							<a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=6KQjIZd9gVA">
 								<img src="<?php bloginfo('template_url');?>/assets/images/img-video-1.png" width="240" height="180" />
+							</a>
+						</li>
+						<li>
+							<a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=2n0uxhkMamM">
+								<img src="<?php bloginfo('template_url');?>/assets/images/video-huyet-chien.jpg" width="240" height="180" />
+							</a>
+						</li>
+						<li>
+							<a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=EMRyKEJGflU">
+								<img src="<?php bloginfo('template_url');?>/assets/images/video-chieu-mo.jpg" width="240" height="180" />
+							</a>
+						</li>
+						<li>
+							<a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=W0IBrpaKGEc">
+								<img src="<?php bloginfo('template_url');?>/assets/images/video-lich-su.jpg" width="240" height="180" />
+							</a>
+						</li>
+						<li>
+							<a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=49kgbPycBNU">
+								<img src="<?php bloginfo('template_url');?>/assets/images/video-tuong-duong-chien.jpg" width="240" height="180" />
 							</a>
 						</li>
 					</ul>

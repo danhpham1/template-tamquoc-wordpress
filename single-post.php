@@ -81,7 +81,7 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
 								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
-							<img class="qr" src="<?php bloginfo('template_url'); ?>/assets/images/qr.png"></img>
+							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
 							<img src="<?php bloginfo('template_url'); ?>/assets/images/nap-the.png">
 							<img src="<?php bloginfo('template_url'); ?>/assets/images/giftcode.png">
 						</div>

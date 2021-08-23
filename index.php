@@ -53,7 +53,7 @@
 					<a onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/qr.png" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/qr-bk.png" alt="">
 				</div>
 				<div class="sticky-right-btn btn-chplay">
 					<a href="https://tamquoc.itap.vn/huong-dan-nap-va-su-dung-phieu-thanh-toan/" target="_blank">
