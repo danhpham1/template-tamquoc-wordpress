@@ -40,26 +40,20 @@
 				<img src="<?php bloginfo('template_url'); ?>/assets/images/sticky-errow.png" alt="">
 			</div>
 			<div class="sticky-right-items">
-				<!-- <div class="sticky-right-btn btn-chplay">
-					<a href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt=""></a>
+				<div class="sticky-right-btn btn-chplay">
+					<a href="https://play.google.com/store/apps/details?id=tantamquoc.itap.game" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
-					<a href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
-				</div> -->
-				<div class="sticky-right-btn btn-chplay">
-					<a onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url'); ?>/assets/images/googleplay.png" alt=""></a>
-				</div>
-				<div class="sticky-right-btn btn-chplay">
-					<a onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
+					<a href="https://apps.apple.com/vn/app/id1570594577" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/appstore.png" alt=""></a>
 				</div>
 				<div class="sticky-right-btn btn-chplay">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/qr-bk.png" alt="">
 				</div>
-<!-- 				<div class="sticky-right-btn btn-chplay">
+				<div class="sticky-right-btn btn-chplay">
 					<a href="https://tamquoc.itap.vn/huong-dan-nap-va-su-dung-phieu-thanh-toan/" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/nap-the-btn.png" alt="">
 					</a>
-				</div> -->
+				</div>
 				<div class="sticky-right-btn btn-chplay">
 					<a href="https://www.facebook.com/tamquoc.itap.vn" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/fanpage-btn.png" alt="">

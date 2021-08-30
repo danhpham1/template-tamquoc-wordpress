@@ -59,12 +59,12 @@
 						</div>
 						<div class="main--info-right">
 							<div class="main--info-right-left">
-								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
-								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
+								<a href="https://play.google.com/store/apps/details?id=tantamquoc.itap.game"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
+								<a href="https://apps.apple.com/vn/app/id1570594577"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
 							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
-							<!-- <img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png">
-							<img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"> -->
+							<a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
+							<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a>
 						</div>
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						<li id="tab-id-3"><a href="#tabs-3">Video Clips</a></li>
 					</ul>
 				</div>
-<!-- 				<div id="tabs-1" class="tituc-main--right">
+				<div id="tabs-1" class="tituc-main--right">
 					<ul class="list-img">
 						<li>
 							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png">
@@ -96,8 +96,16 @@
 								</span>
 							</a>
 						</li>
+						<li>
+							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-3.png">
+								<span class="post-img">
+									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-3.png" />
+									<span class="post-mask"></span>
+								</span>
+							</a>
+						</li>
 					</ul>
-				</div> -->
+				</div>
 				<div id="tabs-2" class="tituc-main--right">
 					<ul class="list-img">
 						<li>
@@ -112,6 +120,14 @@
 							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png">
 								<span class="post-img">
 									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png" />
+									<span class="post-mask"></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-3.png">
+								<span class="post-img">
+									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-3.png" />
 									<span class="post-mask"></span>
 								</span>
 							</a>
@@ -153,26 +169,26 @@
 		include get_theme_file_path('/partials/footer-partials.php');
 		?>
 		<!-- notification link -->
-        <div class="modal fade" id="notification-link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="swal-icon swal-icon--warning">
-                            <span class="swal-icon--warning__body">
-                                <span class="swal-icon--warning__dot"></span>
-                            </span>
-                        </div>
-                        <p class="font-weight-bold text-center">
-                            Đang Cập Nhật, Vui Lòng Quay Lại Sau.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Đóng</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
+		<div class="modal fade" id="notification-link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="swal-icon swal-icon--warning">
+							<span class="swal-icon--warning__body">
+								<span class="swal-icon--warning__dot"></span>
+							</span>
+						</div>
+						<p class="font-weight-bold text-center">
+							Đang Cập Nhật, Vui Lòng Quay Lại Sau.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Đóng</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  -->
 		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 		<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/toggle-bar.js">
@@ -217,8 +233,8 @@
 		  firebase.initializeApp(firebaseConfig);
 		  firebase.analytics();
 		  function showModal(modal){
-            $(modal).modal();
-          }
+		  	$(modal).modal();
+		  }
 		</script>
 	</body>
 	</html>

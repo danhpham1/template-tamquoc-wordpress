@@ -179,6 +179,7 @@
 .breadcrumb-post ul li a{
 	color: rgb(192, 183, 180);
 	text-transform: capitalize;
+	font-size: 15px;
 }
 
 .breadcrumb-post ul li:hover a{

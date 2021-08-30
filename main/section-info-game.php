@@ -2,8 +2,8 @@
 	<div class="main--container">
 		<div class="main--arrow">
 			<img class="main--arrow-left" src="<?php bloginfo('template_url');?>/assets/images/main-arrow-left.png">
-			<!-- <a class="main--arrow-btn-playnow" href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a> -->
-			<a class="main--arrow-btn-playnow" onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a>
+			<a class="main--arrow-btn-playnow" href="https://dl.itap.vn/web" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a>
+			<!-- <a class="main--arrow-btn-playnow" onclick="showModal('#notification-link')"><img src="<?php bloginfo('template_url');?>/assets/images/choi-ngay.png"></a> -->
 			<img class="main--arrow-right" src="<?php bloginfo('template_url');?>/assets/images/main-arrow-right.png">
 		</div>
 		<div class="main--info">
@@ -18,26 +18,25 @@
 			</div>
 			<div class="main--info-right">
 				<div class="main--info-right-left">
-					<!-- <a href="https://dl.itap.vn/web" target="_blank"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
-					<a href="https://dl.itap.vn/web" target="_blank"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a> -->
-					<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
-					<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
+					<a href="https://play.google.com/store/apps/details?id=tantamquoc.itap.game" target="_blank"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
+					<a href="https://apps.apple.com/vn/app/id1570594577" target="_blank"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 				</div>
 				<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
-				<!-- <a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
-				<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a> -->
+				<a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
+				<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a>
 			</div>
 			</div>
 			<div class="main-news-container">
 				<div class="main--news-right">
 					<div class="w3-content w3-display-container">
-						<a href="https://tamquoc.itap.vn/huong-dan-nap-va-su-dung-phieu-thanh-toan/"><img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png"></a>
+						<!-- <a href="https://tamquoc.itap.vn/1100-26-08-ra-mat-s1-quan-vu/"><img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png"></a> -->
 						<a href="https://tamquoc.itap.vn/huong-dan-nhap-code/"><img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png"></a>
-						<!-- <img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-1.png"> -->
+						<a href="https://tamquoc.itap.vn/huong-dan-nap-va-su-dung-phieu-thanh-toan/"><img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/wrapper-3.png"></a>
+						<!-- <img class="mySlides" src="<?php bloginfo('template_url');?>/assets/images/img-video-1.png"> -->
 						<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+							<!-- <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span> -->
 							<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
 							<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-							<!-- <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
 						</div>
 					</div>
 				</div>

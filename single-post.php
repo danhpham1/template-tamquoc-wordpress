@@ -78,12 +78,12 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 						</div>
 						<div class="main--info-right">
 							<div class="main--info-right-left">
-								<a onclick="showModal('#notification-link')"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
-								<a onclick="showModal('#notification-link')"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
+								<a href="https://play.google.com/store/apps/details?id=tantamquoc.itap.game"><img class="google-play" src="<?php bloginfo('template_url');?>/assets/images/google-play.png"></img></a>
+								<a href="https://apps.apple.com/vn/app/id1570594577"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
 							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
-							<!-- <img src="<?php bloginfo('template_url'); ?>/assets/images/nap-the.png">
-							<img src="<?php bloginfo('template_url'); ?>/assets/images/giftcode.png"> -->
+							<a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
+							<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a>
 						</div>
 					</div>
 				</div>
@@ -175,7 +175,7 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 			behavior: 'smooth',
 		}));
 		function showModal(modal){
-		  	$(modal).modal();
+			$(modal).modal();
 		}
 	</script>
 </body>
