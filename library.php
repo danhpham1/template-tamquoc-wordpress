@@ -63,8 +63,8 @@
 								<a href="https://apps.apple.com/vn/app/id1570594577"><img class="apple-store" src="<?php bloginfo('template_url');?>/assets/images/app-store.png"></img></a>
 							</div>
 							<img class="qr" src="<?php bloginfo('template_url');?>/assets/images/qr-bk.png"></img>
-							<a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
-							<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a>
+							<!-- <a href="https://nap.itap.vn" target="_blank"s><img src="<?php bloginfo('template_url');?>/assets/images/nap-the.png"></a>
+							<a href="https://nap.itap.vn/giftcode" target="_blank"><img src="<?php bloginfo('template_url');?>/assets/images/giftcode.png"></a> -->
 						</div>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 								</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png">
 								<span class="post-img">
 									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png" />
@@ -103,7 +103,7 @@
 									<span class="post-mask"></span>
 								</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 				<div id="tabs-2" class="tituc-main--right">
@@ -116,7 +116,7 @@
 								</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a data-fancybox="gallery" href="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png">
 								<span class="post-img">
 									<img src="<?php bloginfo('template_url');?>/assets/images/wrapper-2.png" />
@@ -131,7 +131,7 @@
 									<span class="post-mask"></span>
 								</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 				<div id="tabs-3" class="tituc-main--right">
