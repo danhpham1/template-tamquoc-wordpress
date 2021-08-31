@@ -98,6 +98,9 @@
 		</div>
 	</div>
 	<!--  -->
+	<div id="url">
+		
+	</div>
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/tabs.js">
 	</script>
@@ -129,6 +132,15 @@
 		function showModal(modal){
 			$(modal).modal();
 		}
+	</script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() {
+			const url = window.location.href;
+			if(!window.localStorage.getItem("url")){
+				window.localStorage.setItem("url",url);
+			}
+			document.querySelector("#url").innerHTML = window.localStorage.getItem("url");
+		});
 	</script>
 </body>
 

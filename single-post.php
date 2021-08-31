@@ -138,6 +138,9 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		</div>
 	</div>
 	<!--  -->
+	<div id="url">
+		
+	</div>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/toggle-bar.js">
 	</script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/handle-submit-search.js">
@@ -177,6 +180,11 @@ $finalurl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		function showModal(modal){
 			$(modal).modal();
 		}
+	</script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() {
+			document.querySelector("#url").innerHTML = window.localStorage.getItem("url");
+		});
 	</script>
 </body>
 
